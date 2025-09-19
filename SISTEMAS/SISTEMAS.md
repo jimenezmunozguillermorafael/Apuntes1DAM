@@ -1,6 +1,8 @@
 # UD 1 
-Comandos:
+## Comandos:
 Todas las rutas en linux llevan una "/"
+sudo ___ realizar acciones como administrador
+sudo su ___ da permisos de root
 pwd___ donde estoy
 ls___ Lista archivos y carpetas
 cd___ cambio de escritorio
@@ -16,5 +18,6 @@ cp ___ copiar archivos o carpetas
 chmod 777 ___ da permisos totales 
 mv ___ mueve o renombra
 echo ___ imprime texto
+
 
 
