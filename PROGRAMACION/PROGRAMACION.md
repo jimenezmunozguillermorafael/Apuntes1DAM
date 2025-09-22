@@ -31,3 +31,10 @@ La sintaxis básica de prompt es ()
 
 console.log = muestra mensaje en la consola --- console.log(valor1, valor2,...)
 "let nombre = "Ana"
+
+Operaciones:
+Suma (+), Podemos sumar strings. Depende del contexto
+Resta (-)
+Multiplicación (*)
+División (/)
+Modulo (%) = resto de division "let módulo = 10 % 3 = 1 
