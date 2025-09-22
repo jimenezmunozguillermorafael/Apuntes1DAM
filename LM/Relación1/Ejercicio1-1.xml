@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="=UTF-8"?>
+<libros>
+    <libro>
+        <titulo>Cien años de Soledad</titulo>
+        <autor>Gabriel Garcia Marquez</autor>
+        <anio>1967</anio>
+        <editorial>Sudamerica</editorial>
+    </libro>
+</libros>
+    

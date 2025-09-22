@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="=UTF-8"?>
+<recetas>
+    <receta>
+        <nombre>Tortilla de patatas</nombre>
+        <ingredientes>Patatas y huevos</ingredientes>
+        <Tiempodepreparación>50 mintos</Tiempodepreparación>
+    </receta>
+
+    <receta>
+        <nombre>Lasaña</nombre>
+        <ingredientes>Laminas, carne picada,bechamel </ingredientes>
+        <Tiempodeprepación>120 minutos</Tiempodeprepación>
+    </receta>
+</recetas>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="=UTF-8"?>
+<alumnos>
+    <alumno>
+        <nombre>Juan Carlos</nombre>
+        <apellidio>Cuadrado</apellidio>
+        <edad>26</edad>
+        <email>jcg@gmail.com</email>
+    </alumno>
+           
+</alumnos>
+    

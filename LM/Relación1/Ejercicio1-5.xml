@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="=UTF-8"?>
+<clases>
+    <clase1>
+        <alumnos>
+            <alumno>
+                <nombre>Juan Carlos</nombre>
+                <edad>26 años</edad>
+                <notaMedia>9</notaMedia>
+            </alumno>
+            <alumno>
+                <nombre>Javi Martinez</nombre>
+                <edad>30 años</edad>
+                <notaMedia>10</notaMedia>
+            </alumno>
+            <alumno>
+                <nombre>Guillermo</nombre>
+                <edad>26 años</edad>
+                <notaMedia>5</notaMedia>
+            </alumno>
+        </alumnos>
+    </clase1>
+
+
+
+    
+</clases>
