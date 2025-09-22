@@ -14,6 +14,8 @@ Boolean= puede ser true o false
 Ejemplos boolean: let esMayorDeEdad = true
                       esEstudiante = false
 
+LAS VARIABLES SE DECLARAN CON LET
+
 Variables=contenedor que almacena un valor
 
 var: ámbito global o de función (var pais = España)
@@ -38,3 +40,4 @@ Resta (-)
 Multiplicación (*)
 División (/)
 Modulo (%) = resto de division "let módulo = 10 % 3 = 1 
+
