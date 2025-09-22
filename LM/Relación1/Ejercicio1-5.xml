@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="=UTF-8"?>
 <clases>
-    <clase1>
+    <clase>
         <alumnos>
             <alumno>
                 <nombre>Juan Carlos</nombre>
@@ -18,5 +18,5 @@
                 <notaMedia>5</notaMedia>
             </alumno>
         </alumnos>
-    </clase1>
+    </clase>
 </clases>
