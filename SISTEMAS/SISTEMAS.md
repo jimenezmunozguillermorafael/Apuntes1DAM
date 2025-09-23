@@ -1,6 +1,12 @@
 # UD 1 
+
 ## Comandos:
+
 Todas las rutas en linux llevan una "/"
+
+$ se trata del signo de variable
+
+./ para ejecutar programa
 
 sudo ___ realizar acciones como administrador
 
@@ -30,10 +36,30 @@ rmdir ___ eliminar carpetas
 
 cp ___ copiar archivos o carpetas
 
-chmod 777 ___ da permisos totales 
+chmod 777 ___ da permisos totales = chmod +x chmod +r chmod +w
+
+chmos +x _____ darle permisos de ejecucion
 
 mv ___ mueve o renombra
 
 echo ___ imprime texto
 
-|
+Los prametros son cosas que podemose escribir detras del programa
+
+Si empieza por / se trata de una ruta solida
+
+Redireccion de salidas: ls ---> (salida estandar) puede guardarse en un archivo log.txt
+
+Ejemplo: ls -l > prueba.txt
+
+wc ____ cuenta las palabras, letras y lineas 
+
+wc -l ____ solo cuenta lineas 
+
+resultado= $(ls -l $1|wc -l) _____ Variable = $(cosas escritas) 
+
+Si la orden de echo va entre (()) estaremos trabjando con numeros  
+
+
+
+
