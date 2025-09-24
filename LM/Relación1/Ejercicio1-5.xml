@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="=UTF-8"?>
-<clases>
+<instituto>
     <clase>
         <alumnos>
             <alumno>
@@ -19,4 +19,4 @@
             </alumno>
         </alumnos>
     </clase>
-</clases>
+</instituto>

@@ -40,3 +40,57 @@ Multiplicación (*)
 División (/)
 Modulo (%) = resto de division "let módulo = 10 % 3 = 1 
 
+## Operadores lógicos en JavaScript
+Te permite evaluar condiciones y devolver un valor booleano (true or false):
+
+AND lógico (&&): evalua si ambas condiciones son verdaderas.
+let es Adulto = (edad >= 18 && edad <= 65)
+
+OR lógico (||): evalua si al menos una de las condiciones es verdadera.
+let esMenorOMayor = (edad <18 || edad > 65)
+
+NOT lógico (!): invierte el valor de una condicion.
+let noAdulto = !(edad >= 18)
+
+## Funciones de conversiones comunes
+
+Number(): convierte una cadena de texto es un numero. Si no puede convertir el valor, devuelve NaN (Not a Number)
+let numero = Number ("123") // RESULTADO: 123
+
+parseInt(): convierte una cadena a un número entero.
+let entero = parseInt ("123.45")
+
+## Estructuras condicionales
+Permiten que el programa ejecute diferentes bloques de codigo segun si una condicion evaluada es verdadera o falsa. Se utilizaran if, if else, else.
+
+# Ejemplo de uso if y else:
+
+let edad = 18
+if (edad >= 18) {
+    console .log("Eres mayor de edad")
+} else { 
+    console.log("Eres menor de edad")
+}
+
+# Ejemplo con else if 
+
+let edad = 16
+if (edad < 13) {
+    console.log("Eres un niño)
+} else if (edad < 18) {
+    console.log("Eres un adolescente")
+} else {
+    console.log("Eres un adulto")
+}
+
+Los operadores de comparación permiten comparar dos valores o variables. El resultado de una comparación es siempre un valor booleano: true o false. Los operadores de comparación más comunes en JavaScript son:
+
+    == : Evalúa si dos valores son iguales (sin verificar el tipo).
+    === : Evalúa si dos valores son estrictamente iguales (incluyendo el tipo).
+    != : Evalúa si dos valores son diferentes.
+    !== : Evalúa si dos valores son estrictamente diferentes (incluyendo el tipo).
+    < : Menor que.
+    > : Mayor que.
+    <= : Menor o igual que.
+    >= : Mayor o igual que.
+
