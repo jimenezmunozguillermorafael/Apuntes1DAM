@@ -16,6 +16,8 @@ pwd___ donde estoy
 
 ls___ Lista archivos y carpetas
 
+ls -l: listar documentos hacia abajo
+
 cd___ cambio de escritorio
 
 cd .. ___ sube de nivel
@@ -59,6 +61,39 @@ wc -l ____ solo cuenta lineas
 resultado= $(ls -l $1|wc -l) _____ Variable = $(cosas escritas) 
 
 Si la orden de echo va entre (()) estaremos trabjando con numeros  
+
+## sintaxis bash comandos linux (debian)
+
+
+
+
+# RECUERDA DAR PERMISOS QUE SI NO NO FUNCIONA (chmod 777)
+
+## Crear script para buscar documentos 
+```bash
+#!/bin/bash
+
+resultado=$(ls -l $1 | grep .txt)
+echo $(($resultado - 1)) 
+```
+
+## Crear script que cuenten archivos/carpetas que se encuentren en cualquier carpeta
+```bash
+#!/bin/bash
+
+resultado=$(ls -l $1 | wc -l)
+echo $(($resultado -1))
+```
+
+## Cuenta los archivos de la carpeta pasada como primer parametro que cumplan con la expresion pasada como segundo parametro
+
+
+
+
+## Almacena dentro del archivo log.txt cuantos archivos hay en alumnoT (recurssivamente) que contengan la cadena de texto "stem"
+## haz lo mismo que en el 1 pero que la carpeta la pasemos como parametro.
+
+
 
 
 
