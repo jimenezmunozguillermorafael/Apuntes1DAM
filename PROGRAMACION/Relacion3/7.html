@@ -1,0 +1,20 @@
+<script>
+//Pide dos números y una operación (+, -, *, /) e imprime el resultado correspondiente.
+let numberUser1 = Number(prompt("Introduce tu primer número"))
+let numberUser2 = Number(prompt("Introduce tu segundo número"))
+let operationUser = prompt("Elige entre +, -, *, /")
+if (operationUser == "+") {
+    let suma = numberUser1 + numberUser2
+    console.log("El resultado de la suma es " + suma)
+}else if (operationUser == "-") {
+    let resta = numberUser1 - numberUser2
+    console.log("El resultado de la suma es " + resta)
+}
+if (operationUser == "*") {
+    let mult = numberUser1 * numberUser2
+    console.log("El resultado de la suma es " + mult)
+}else if (operationUser == "/") {
+    let split = numberUser1 / numberUser2
+    console.log("El resultado de la division es " + split)
+}
+</script>

@@ -1,0 +1,10 @@
+<script>
+//Solicita un año y determina si es bisiesto. son divisibles entre 4, no disivisibles 100 al menos que sean divisibles entre 400
+let year = Number(prompt("introduce un año"))
+let divisibles4 = (year % 4 == 0)
+let divisibles100 = (year % 100 == 0)
+let divibles400 = (year % 400 == 0)
+if ((divisibles4 && !divisibles100) || divibles400){
+    console.log("este año es bisiesto")
+} else {("Este año no es bisiesto")}
+</script>
