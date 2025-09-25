@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE equipo [
+    <!ELEMENT equipo (pokemon+)>
+    <!ELEMENT pokemon (nombre, tipo, nivel)>
+    <!ELEMENT nombre (#PCDATA)>
+    <!ELEMENT tipo (#PCDATA)>
+    <!ELEMENT nivel (#PCDATA)>
+
+]>
+<equipo>
+    <pokemon>
+        <nombre>Milktank</nombre>
+        <tipo>Leche</tipo>
+        <nivel>1000</nivel>
+    </pokemon>
+    
+    <pokemon>
+        <nombre>Charizard</nombre>
+        <tipo>Fuego</tipo>
+        <nivel>100</nivel>
+    </pokemon>
+
+    <pokemon>
+        <nombre>Reykuasa</nombre>
+        <tipo>Volador</tipo>
+        <nivel>100</nivel>
+    </pokemon>
+</equipo>
