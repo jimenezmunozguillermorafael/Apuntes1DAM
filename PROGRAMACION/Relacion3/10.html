@@ -1,0 +1,25 @@
+<script>
+//Pide al usuario su calificación (entre 0 y 100) y devuelve su letra correspondiente
+//A (90-100). B (80-89). C (70-79). D (60-69). F (0-59).
+let calificacionUsuario = prompt("Introduce tu calificacion")
+calificacionUsuario = Number
+if (calificacionUsuario >= 0 && calificacionUsuario <= 100 ) {
+    let letra
+    if (calificacionUsuario >=90) {
+        letra = "A"
+     } if else (calificacionUsuario >=80) {
+        letra = "B"
+      } if else (calificacionUsuario >= 70) {
+        letra = "C"
+       } if else (calificacionUsuario >=60)
+        letra = "D"
+       } else {
+        letra = "F"
+       } 
+       console.log("Tu calificacion es " + letra)
+    } else {
+        console.log ("La calificaion debe estar entre 0 y 100")
+
+    }
+
+</script>
