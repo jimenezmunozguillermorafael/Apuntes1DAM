@@ -1,0 +1,19 @@
+<script>
+    //Solicita la temperatura actual e imprime:
+    //"Muy frío" si es menor a 0°C. 
+    //"Frío" si es entre 0°C y 15°C.
+    //"Templado" si es entre 16°C y 25°C.
+    //"Caliente" si es mayor a 25°C.
+    let tempeAct = Number(prompt("¿Cual es la temperatura actual?"))
+    let mensaje = ""
+    if (tempeAct < 0) {
+        mensaje = "Muy frio"
+    } else if (tempeAct <= 15) {
+        mensaje = "Frio"
+    } else if (tempeAct <= 16 && tempeAct <= 25) {
+        mensaje = "Templado"
+    } else if (tempeAct > 25) {
+        mensaje = "caliente"
+    }
+    console.log(mensaje);
+</script>

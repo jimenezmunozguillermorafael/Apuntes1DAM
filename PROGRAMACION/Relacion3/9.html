@@ -1,17 +1,19 @@
 <script>
 //Pide un número de dos cifras e imprime la suma de sus dígitos.
 //Si el número introducido no es de dos cifras, se debe avisar al usuario.
-let numberUser= prompt("Introduce un número de dos cifras")
+let numero = prompt("Introduce un número de dos cifras")
 //Convertimos la cadena de texto a número
-numberUser = Number
+numero  = Number (numero)
 //Validar que se trata de un numero de dos cifras, del 10 al 99
-if (numberUser >=10 && numberUser <=99){
+if (numero >=10 && numero  <=99){
     //Ponemos parseInt para que no salga decimales (4.3 --- 4)
-    let decenasNumero = parseInt(numberUser/10)
-    let unidadesDecenas = (numberUser%10)
-    let sumaDyu = decenasNumero + unidadesDecenas
-    console.log("Si sumamos las decenas, que son " + decenasNumero + "y las unidades, que son" + unidadesDecenas + "de tu numero, el resultado es " + sumaDyu )
+    //Con las unidades no hace falta porque el resto va a ser sin decimales.
+    let digitoDecenas = parseInt(numero /10)
+    let digitoUnidades = numero %10
+    let sumaDyu = digitoDecenas + digitoUnidades
+    console.log("Si sumamos las dos cifras de tu numero el resultado es" + sumaDyu )
 } else {
     console.log ("El numero no tiene dos cifras")
 }
+console.log ("La suma de las cifras es " + sumaDyu)
 </script>

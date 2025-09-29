@@ -1,0 +1,23 @@
+<script>
+    //Solicita el valor de un ángulo y determina si es:
+    //Ángulo agudo (< 90°).
+    //Ángulo recto (= 90°).
+    //Ángulo obtuso (> 90° pero < 180°).
+    //Ángulo llano (= 180°).
+    let anguloUser = Number(prompt("Introduce cuanto mide el angulo"))
+    let mensaje = ""
+    if (anguloUser = 90) {
+        mensaje = " Es un angulo recto"
+    } else if (anguloUser < 90) {
+        mensaje = "Es un angulo agudo"
+    } else if (anguloUser > 90 && anguloUser < 180) {
+        mensaje = "Es un angulo obtuso"
+    } else if (anguloUser = 180) {
+        mensaje = "Es un angulo llano"
+    }
+    else {
+        mensaje = "Un angulo no puede tener esas medidas"
+    }
+
+console.log(mensaje);
+</script>

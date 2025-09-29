@@ -1,6 +1,4 @@
-DTD es un mecanismo utilizado en XML para definir las reglas estructurales que un documento XML debe seguir. Estas reglas incluyen qué elementos y atributos están permitidos, cómo deben organizarse y las relaciones jerárquicas entre ellos. DTD sirve como una "guía" o "molde" que describe la gramática del documento XML, permitiendo que otros sistemas puedan interpretar correctamente los datos y garantizar la conformidad estructural.
-
-Tipos de DTD : 
+# DTD
 
 Interna. Ejemplo: DTD (7-12) XML (13-17)
 
@@ -50,7 +48,7 @@ Ejemplo de una DTD externa:
 
 <!DOCTYPE libro SYSTEM "libro.dtd">
 
-<!ELEMENT>: Define los elementos que están permitidos en el documento XML, su contenido, y las relaciones jerárquicas entre ellos. Los elementos pueden ser de varios tipos:
+<!ELEMENT>: Define los elementos que están permitidos en el documento XML, su contenido, y las relaciones jerárquicas entre ellos. Los elementos pueden ser de varios tipos
 
 Elementos de texto: Utilizan #PCDATA (parsed character data), que indica que el elemento contiene datos textuales.
 
@@ -66,6 +64,104 @@ Cantidad de ocurrencias: El número de veces que un elemento puede aparecer se d
 
 El DTD nos avisa si nuestro XML esta mal.
 
+# XSD
 
+La sintaxis de XSD utiliza etiquetas XML para definir la estructura y los tipos de datos de un documento. 
+
+La etiqueta principal en un esquema XSD es <xs:schema>
+
+structura básica de un esquema XSD:
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="persona">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="nombre" type="xs:string"/>
+        <xs:element name="edad" type="xs:integer"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
+
+## Explicación de la sintaxis:
+
+<xs:schema>: Esta es la raíz del esquema XSD y define el espacio de nombres para el esquema XML (xmlns:xs="http://www.w3.org/2001/XMLSchema"), lo que asegura que el esquema siga el estándar XSD del W3C.
+
+<xs:element>: Se utiliza para declarar un elemento. En este caso, se define un elemento llamado persona, que es un contenedor para otros elementos (nombre y edad). Cada elemento puede tener atributos adicionales como el tipo de datos y restricciones específicas.
+
+ <xs:complexType>: Los tipos complejos permiten definir estructuras que contienen otros elementos. En el caso de persona, el tipo complejo permite contener una secuencia de subelementos como nombre y edad.
+
+<xs:sequence>: Dentro de un tipo complejo, una secuencia indica que los subelementos deben aparecer en el orden especificado. En este caso, nombre debe aparecer antes que edad dentro de cualquier instancia del elemento persona.
+
+    Tipos de datos predefinidos: XSD ofrece un conjunto robusto de tipos de datos predefinidos, que incluyen:
+        xs:string: Representa texto.
+        xs:integer: Representa un número entero.
+        xs:date: Representa una fecha en formato ISO (YYYY-MM-DD).
+        xs:boolean: Representa valores booleanos (true o false).
+        xs:decimal: Representa números decimales con precisión arbitraria.
+
+## Restricciones y validación en XSD:
+
+XSD permite imponer restricciones adicionales sobre los valores que pueden contener los elementos o atributos. Algunas de las restricciones comunes incluyen:
+
+    Restricciones de longitud:
+
+    <xs:element name="NombreLimitado">
+     <xs:simpleType>
+       <xs:restriction base="xs:string">
+         <xs:maxLength value="50"/>
+       </xs:restriction>
+     </xs:simpleType>
+    </xs:element>
+
+En este ejemplo, se define un tipo de dato personalizado NombreLimitado que restringe la longitud máxima de cualquier valor de texto a 50 caracteres.
+
+## Valores mínimos y máximos para números:
+
+ <xs:element name="EdadLimitada">
+   <xs:simpleType>
+     <xs:restriction base="xs:integer">
+       <xs:minInclusive value="0"/>
+       <xs:maxInclusive value="120"/>
+     </xs:restriction>
+   </xs:simpleType>
+ </xs:element>
+
+Este tipo restringe el valor de edad para que esté entre 0 y 120 años.
+
+## Patrones (expresiones regulares):
+
+ <xs:element name="Telefono">
+   <xs:simpleType >
+     <xs:restriction base="xs:string">
+       <xs:pattern value="\d{3}-\d{3}-\d{4}"/>
+     </xs:restriction>
+   </xs:simpleType>
+ </xs:element>
+
+Aquí se define un patrón de teléfono que requiere que el valor tenga el formato NNN-NNN-NNNN donde N es un dígito.
+
+## Cardinalidad (número de ocurrencias):
+
+<xs:element name="telefono" type="xs:string" minOccurs="0" maxOccurs="3"/>
+
+    Esto permite que el elemento telefono aparezca hasta tres veces en el documento XML, pero puede no aparecer (minOccurs="0").
+
+    Restricción por enumeración:
+
+<xs:element name="estado">
+    <xs:simpleType>
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Pendiente"/>
+            <xs:enumeration value="Enviado"/>
+            <xs:enumeration value="Entregado"/>
+            <xs:enumeration value="Cancelado"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:element>
+
+La restricción enumeration se utiliza para limitar los valores posibles de un elemento. En este caso, el elemento estado solo puede tener uno de los siguientes valores: Pendiente, Enviado, Entregado o Cancelado. Si se proporciona un valor diferente, no será válido.
+
+Esta restricción es útil para campos que solo pueden aceptar un conjunto específico de valores, como estados, categorías, o niveles.
 
 

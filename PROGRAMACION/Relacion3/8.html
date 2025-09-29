@@ -1,9 +1,12 @@
 <script>
 //Solicita un número y determina si es positivo, negativo o cero.
+let mensaje
 let numberUser1 = Number(prompt("Introduce un número"))
-if (numberUser1 >= 0 ) {
-    console.log ("el número " + numberUser1 + " es positivo")
-} else {
-    console.log ("el numero " + numberUser1 + " es negativo")
+if (numberUser1 < 0 ) {
+  mensaje = "el número "  + " es positivo"
+} else if  (numberUser1 > 0) {
+  mensaje = "el numero " + " es negativo"
+} else { 
+    mensaje = "El numero es 0"
 }
 </script>

@@ -1,0 +1,20 @@
+<script>
+    //Pide al usuario su salario anual e imprime el impuesto a pagar según estos tramos:
+    //Menos de 10.000€: 0% de impuestos.
+    //De 10.000€ a 20.000€: 10%.
+    //De 20.000€ a 40.000€: 20%.
+    //Más de 40.000€: 30%.
+
+    let salarioUser = Number(prompt("Introduce tu salario anual"))
+    let mensaje = ""
+    if (salarioUser < 10000) {
+        mensaje = "Tu salario es de " + salarioUser
+    } else if (salarioUser >= 10000 && salarioUser <= 20000) {
+        mensaje = "Pagarias un 10% de impuestos y te quitaran " + salarioUser * 0.1
+    } else if (salarioUser >= 20000 && salarioUser <= 40000) {
+        mensaje = "Pagarias un 20% de impuestos y te quitaran " + salarioUser * 0.2
+    } else if (salarioUser < 40000) {
+        mensaje = "Pagarias un 30% de impuestos y te quitaran " + salarioUser * 0.3
+    }
+    console.log(mensaje)
+</script>

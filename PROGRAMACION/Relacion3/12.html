@@ -1,0 +1,17 @@
+<script>
+    //Pide al usuario las longitudes de los tres lados de un triángulo e indica si es equilátero, isósceles o escaleno.
+
+    let mensaje = ""
+    let ladoA = Number(prompt("Intruduce lado A"))
+    let ladoB = Number(prompt("Introduce lado B"))
+    let ladoC = Number(prompt("Introduce lado C"))
+    if (ladoA == ladoB && ladoB == ladoC) {
+        mensaje = "El triangulo es equilatero"
+    } else if (ladoA == ladoB || ladoB == ladoC || ladoA == ladoC) {
+        mensaje = "El triangulo es isosceles"
+    } else {
+        mensaje = "El triangulo es escaleno"
+    }
+    console.log(mensaje);
+
+</script>

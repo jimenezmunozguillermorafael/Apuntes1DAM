@@ -1,0 +1,17 @@
+<script>
+    //Pide una letra al usuario e indica si es una vocal (a, e, i, o, u) o una consonante.
+
+    let letraUser = prompt("Introduce una letra")
+    letraUser = letraUser.toLowerCase
+    let mensaje = ""
+    if (letraUser == "a" ||
+        letraUser == "e" || 
+        letraUser == "i" ||
+        letraUser == "o" ||
+        letraUser == "u") {
+        mensaje = "Esta letra es una vocal"
+    } else {
+        mensaje = "Esta letra es una consonante"
+    }
+    console.log(mensaje);
+</script>
