@@ -1,0 +1,29 @@
+<script>
+//Pide al usuario la duración de una llamada (en minutos) y calcula el coste total según estas reglas
+//Los primeros 3 minutos son gratis.
+//De 3 a 10 minutos cuesta 0.50€ por minuto.
+//Más de 10 minutos cuesta 0.30€ por minuto adicional.
+  let entrada = prompt("Introduzca la duración en minutos:")
+  let duracion = Number(entrada)
+  let precio = 0
+
+  if (!(duracion >= 0)) {
+    console.log("Entrada no válida. Introduzca un número mayor o igual a 0.")
+  } else {
+    let primerosGratis = 3
+    let limiteSegundoTramo = 10
+    let precioSegundoTramo = 0.5
+    let precioTercerTramo = 0.3
+
+    if (duracion > limiteSegundoTramo) {
+      precio = precio + (duracion - limiteSegundoTramo) * precioTercerTramo
+      duracion = limiteSegundoTramo
+    }
+    if (duracion > primerosGratis) {
+      precio = precio + (duracion - primerosGratis) * precioSegundoTramo
+      duracion = primerosGratis
+    }
+
+    console.log("El precio de la llamada es: " + precio.toFixed(2) + " €")
+  }
+</script>

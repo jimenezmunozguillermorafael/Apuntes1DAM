@@ -1,0 +1,31 @@
+<script>
+//Pide al usuario el tiempo que estuvo estacionado (en horas) y calcula el coste:
+//Primeras 2 horas: 5€ cada hora.
+//De 2 a 5 horas: 4€ cada hora.
+//Más de 5 horas: 3€ cada hora adicional.
+let primerasHoras = 2
+let limiteHoras = 5
+let precio2horas = 5
+let precio5horas = 4
+let precioExtra  = 3
+let userTime = Number(prompt("¿Cuántas horas has estado estacionado?"))
+let duracion = userTime
+//Declaramos error para el 0 . if 
+ if (!(duracion <= 0)) {
+    console.log("Entrada no válida. Introduzca un número mayor o igual a 0.")
+let precio = 0;
+
+  if (userTime <= primerasHoras) {
+    precio = userTime * precio2horas
+  } else if (userTime <= limiteHoras) {
+    precio = (primerasHoras * precio2horas) +
+             (userTime - primerasHoras) * precio5horas
+  } else {
+    precio = (primerasHoras * precio2horas) +
+             (limiteHoras - primerasHoras) * precio5horas +
+             (userTime - limiteHoras) * precioExtra
+  }
+
+  console.log("El precio del parking: " + precio.toFixed(2) + " €")
+}
+</script>

@@ -1,17 +1,17 @@
 <script>
-    //Solicita el promedio académico del estudiante y su ingreso familiar anual:
-    //Si tiene un promedio mayor o igual a 8 y su ingreso es menor a 20.000€, recibe una beca completa.
-    //Si tiene un promedio mayor o igual a 8, pero su ingreso es mayor a 20.000€, recibe una beca parcial.
-    //Si tiene un promedio menor a 8, no recibe beca.
-    let promedioAcad = Number(prompt("Introduce tu promedio academico"))
-    let ingFami = Number(prompt("Introduce tu ingreso familiar"))
-    let mensaje = ""
-    if (promedioAcad >= 8 && ingFami < 20000) {
-        mensaje = "Recibes una beca completa"
-    } else if (promedioAcad >= 8 && ingFami > 20000) {
-        mensaje = "Recibes una beca parcial"
-    } else if (promedioAcad < 8) {
-        mensaje = "No recibes beca"
-    }
-    console.log(mensaje)
+//Pide al usuario la duración de una llamada (en minutos) y calcula el coste total según estas reglas
+//Los primeros 3 minutos son gratis.
+//De 3 a 10 minutos cuesta 0.50€ por minuto.
+//Más de 10 minutos cuesta 0.30€ por minuto adicional.
+//TERMINAR
+let llamadaUser = Number(prompt("¿Cuánto ha durado su llamda?"))
+let mensaje = ""
+if (llamadaUser <=3) {
+    mensaje = "Su llamada no tiene costes adicionales"
+}else if (llamadaUser >3 && llamadaUser <=10){
+    mensaje = "Su llamada tendra unos gastos adicionales de " + 0.50 * (llamadaUser - 3) + " €"
+} else if (llamadaUser >10){
+    mensaje = "Su llamada tendra unos costes adicionales de " + 0.30 * (llamadaUser - 3) + " €"
+} 
+console.log(mensaje);
 </script>
