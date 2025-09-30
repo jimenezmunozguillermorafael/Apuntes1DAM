@@ -7,6 +7,11 @@
 
     let salarioUser = Number(prompt("Introduce tu salario anual"))
     let mensaje = ""
+    if (salarioUser = 0 ){
+        mensaje = "Todavia no pagas impuestos"
+    } else {
+        
+    }
     if (salarioUser < 10000) {
         mensaje = "Tu salario es de " + salarioUser
     } else if (salarioUser >= 10000 && salarioUser <= 20000) {
@@ -15,6 +20,8 @@
         mensaje = "Pagarias un 20% de impuestos y te quitaran " + salarioUser * 0.2
     } else if (salarioUser < 40000) {
         mensaje = "Pagarias un 30% de impuestos y te quitaran " + salarioUser * 0.3
+    } else {
+
     }
     console.log(mensaje)
 </script>
