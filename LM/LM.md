@@ -125,6 +125,7 @@ XSD permite imponer restricciones adicionales sobre los valores que pueden conte
       </xs:simpleType>
     </xs:element>
 Este tipo restringe el valor de edad para que esté entre 0 y 120 años.
+
 ## Patrones (expresiones regulares):
 
     <xs:element name="Telefono">
