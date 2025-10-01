@@ -95,3 +95,5 @@ Los operadores de comparación permiten comparar dos valores o variables. El res
     > : Mayor que.
     <= : Menor o igual que.
     >= : Mayor o igual que.
+
+

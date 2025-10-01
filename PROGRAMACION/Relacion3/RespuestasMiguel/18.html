@@ -1,0 +1,33 @@
+<script>
+
+let promedio = Number(prompt("Inserte su nota pormedio:"))
+    let ingreso = Number(prompt("Inserte su ingreso anual:"))
+
+    const notaMinima = 8
+    const umbralRenta = 20000
+
+    if (promedio >= notaMinima && ingreso < umbralRenta) {
+        console.log("Beca completa")
+    } else if (promedio >= notaMinima && ingreso > umbralRenta) {
+        console.log("Beca parcial")
+    } else {
+        console.log("Sin beca")
+    }
+
+    // Otra solución:
+    promedio = Number(prompt("Inserte su nota pormedio:"))
+    ingreso = Number(prompt("Inserte su ingreso anual:"))
+
+    if (promedio < notaMinima) {
+        console.log("Sin beca")
+    } else if (ingreso < umbralRenta) {
+        console.log("Beca completa")
+    } else if (ingreso > umbralRenta) {
+        console.log("Beca parcial")
+    }
+
+
+
+
+
+</script>

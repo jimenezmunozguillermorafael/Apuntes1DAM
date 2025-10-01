@@ -1,0 +1,39 @@
+<script>
+
+ let salario = prompt("Introduzca una salario:")
+    let impuesto = 0
+    let mensajeImpuestos = ""
+    const PRIMERTRAMO = 10000
+    const SEGUNDOTRAMO = 20000
+    const TERCERTRAMO = 40000
+
+    const PORCENTAJEPRIMERTRAMO = 0.1
+    const PORCENTAJESEGUNDOTRAMO = 0.2
+    const PORCENTAJETERCERTRAMO = 0.3
+
+    salario = Number(salario)
+
+    if (salario <= 0) {
+        // console.log("Impuestos a pagar: " + impuesto)
+        mensajeImpuestos = "Que lástima..."
+    } else if (salario <= PRIMERTRAMO) {
+        // console.log("Impuestos a pagar: " + impuesto)
+        mensajeImpuestos = "Todavía no pagas impuestos!"
+    } else {
+        if (salario <= SEGUNDOTRAMO) {
+            impuesto = salario * PORCENTAJEPRIMERTRAMO
+            // console.log("Impuestos a pagar: " + impuesto)
+        } else if (salario <= TERCERTRAMO) {
+            impuesto = salario * PORCENTAJESEGUNDOTRAMO
+
+            // console.log("Impuestos a pagar: " + impuesto)
+        } else {
+            impuesto = salario * PORCENTAJETERCERTRAMO
+        }
+        mensajeImpuestos = "Impuestos a pagar: " + impuesto
+    }
+    console.log(mensajeImpuestos)
+
+
+
+</script>

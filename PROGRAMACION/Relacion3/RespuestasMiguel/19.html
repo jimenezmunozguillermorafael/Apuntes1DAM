@@ -1,0 +1,35 @@
+<script>
+let entrada = prompt("Introduzca el tiempo estacionado en horas (puede ser decimal):")
+  let horas = Number(entrada)
+  let coste = 0
+
+  if (!(horas >= 0)) {
+    console.log("Entrada no válida. Introduzca un número mayor o igual a 0.")
+  } else {
+    let tramo1Hasta = 2
+    let tramo2Hasta = 5
+    let precioTramo1 = 5
+    let precioTramo2 = 4
+    let precioTramo3 = 3
+
+    if (horas > tramo2Hasta) {
+      coste = coste + (horas - tramo2Hasta) * precioTramo3
+      horas = tramo2Hasta
+    }
+    if (horas > tramo1Hasta) {
+      coste = coste + (horas - tramo1Hasta) * precioTramo2
+      horas = tramo1Hasta
+    }
+    if (horas > 0) {
+      coste = coste + horas * precioTramo1
+    }
+
+    console.log("El coste del estacionamiento es: " + coste.toFixed(2) + " €")
+  }
+
+
+
+
+
+    
+</script>
