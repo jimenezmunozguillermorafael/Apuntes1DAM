@@ -96,4 +96,29 @@ Los operadores de comparación permiten comparar dos valores o variables. El res
     <= : Menor o igual que.
     >= : Mayor o igual que.
 
+## Bucles 
 
+For: El bucle for se utiliza para iterar sobre una secuencia, como un rango de números o una colección de elementos (como un array). Cada vez que el bucle se ejecuta, el programa ejecuta el bloque de código asociado.
+
+Ejemplos
+
+for (let i = 0; i<5; i++){
+    console.log(i)
+}
+
+for (let i = 0; i<5; i= i+2){
+    console.log(i)
+}
+
+## While
+
+While: El bucle while ejecuta repetidamente un bloque de código mientras una condición sea verdadera. Este bucle es útil cuando no se sabe cuántas iteraciones serán necesarias, y la condición depende de una evaluación dinámica.
+
+Ejemplo:
+
+let contraseña = ""
+while (contraseña != "QUESO"){
+    console.log("Contraseña incorrecta")
+    // Pedir contraseña
+}
+console.log("Correcto")
