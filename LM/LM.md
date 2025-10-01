@@ -2,27 +2,27 @@
 
 Interna. Ejemplo: DTD (7-12) XML (13-17)
 
-<!DOCTYPE libro [ 
-<!ELEMENT libro (titulo, autor, editorial)>
-<!ELEMENT titulo (#PCDATA)>
-<!ELEMENT autor (#PCDATA)>
-<!ELEMENT editorial (#PCDATA)>
-]>
-<libro>
-    <titulo>Aprendiendo XML</titulo>
-    <autor>Juan Pérez</autor>
-    <editorial>Editorial Ejemplo</editorial>
-</libro>
+    <!DOCTYPE libro [ 
+    <!ELEMENT libro (titulo, autor, editorial)>
+    <!ELEMENT titulo (#PCDATA)>
+    <!ELEMENT autor (#PCDATA)>
+    <!ELEMENT editorial (#PCDATA)>
+    ]>
+    <libro>
+        <titulo>Aprendiendo XML</titulo>
+        <autor>Juan Pérez</autor>
+        <editorial>Editorial Ejemplo</editorial>
+    </libro>
 
 
 Externa. Ejemplo: 
 
-<!DOCTYPE libro SYSTEM "libro.dtd">
-<libro>
-    <titulo>Aprendiendo XML</titulo>
-    <autor>Juan Pérez</autor>
-    <editorial>Editorial Ejemplo</editorial>
-</libro>
+    <!DOCTYPE libro SYSTEM "libro.dtd">
+    <libro>
+        <titulo>Aprendiendo XML</titulo>
+        <autor>Juan Pérez</autor>
+        <editorial>Editorial Ejemplo</editorial>
+    </libro>
 
 La diferencia entre ambas esta en el inicio en el inicio: 
 
@@ -35,7 +35,7 @@ Externa: <!DOCTYPE xxxx libro SYSTEM "xxxx.dtd"
 La sintaxis de DTD define qué elementos y atributos están permitidos en un documento XML, la relación entre ellos y el número de veces que pueden aparecer. La DTD utiliza una notación particular para describir la estructura del documento, que debe seguirse estrictamente para que un documento XML sea considerado válido según las reglas de su DTD.
 Componentes principales de la sintaxis DTD:
 
-<!DOCTYPE>: Esta declaración define el tipo de documento y hace referencia a la DTD, ya sea interna o externa. Se coloca al principio del documento XML, antes del primer elemento.
+ Esta declaración define el tipo de documento y hace referencia a la DTD, ya sea interna o externa. Se coloca al principio del documento XML, antes del primer elemento.
 
     Ejemplo de una DTD interna:
 
@@ -72,16 +72,16 @@ La etiqueta principal en un esquema XSD es <xs:schema>
 
 structura básica de un esquema XSD:
 
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:element name="persona">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element name="nombre" type="xs:string"/>
-        <xs:element name="edad" type="xs:integer"/>
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-</xs:schema>
+    <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="persona">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="nombre" type="xs:string"/>
+            <xs:element name="edad" type="xs:integer"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
 
 ## Explicación de la sintaxis:
 
@@ -104,7 +104,7 @@ structura básica de un esquema XSD:
 
 XSD permite imponer restricciones adicionales sobre los valores que pueden contener los elementos o atributos. Algunas de las restricciones comunes incluyen:
 
-    Restricciones de longitud:
+## Restricciones de longitud:
 
     <xs:element name="NombreLimitado">
      <xs:simpleType>
@@ -114,30 +114,70 @@ XSD permite imponer restricciones adicionales sobre los valores que pueden conte
      </xs:simpleType>
     </xs:element>
 
+## Valores mínimos y máximos para números:
+
+    <xs:element name="EdadLimitada">
+      <xs:simpleType>
+        <xs:restriction base="xs:integer">
+          <xs:minInclusive value="0"/>
+          <xs:maxInclusive value="120"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:element>
+Este tipo restringe el valor de edad para que esté entre 0 y 120 años.
+## Patrones (expresiones regulares):
+
+    <xs:element name="Telefono">
+      <xs:simpleType >
+        <xs:restriction base="xs:string">
+          <xs:pattern value="\d{3}-\d{3}-\d{4}"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:element>
+Aquí se define un patrón de teléfono que requiere que el valor tenga el formato NNN-NNN-NNNN donde N es un dígito.
+
+## Cardinalidad (número de ocurrencias):
+
+<xs:element name="telefono" type="xs:string" minOccurs="0" maxOccurs="3"/>
+Esto permite que el elemento telefono aparezca hasta tres veces en el documento XML, pero puede no aparecer (minOccurs="0").
+
+## Restricción por enumeración:
+
+    <xs:element name="estado">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:enumeration value="Pendiente"/>
+                <xs:enumeration value="Enviado"/>
+                <xs:enumeration value="Entregado"/>
+                <xs:enumeration value="Cancelado"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+
 En este ejemplo, se define un tipo de dato personalizado NombreLimitado que restringe la longitud máxima de cualquier valor de texto a 50 caracteres.
 
 ## Valores mínimos y máximos para números:
 
- <xs:element name="EdadLimitada">
-   <xs:simpleType>
-     <xs:restriction base="xs:integer">
-       <xs:minInclusive value="0"/>
-       <xs:maxInclusive value="120"/>
-     </xs:restriction>
-   </xs:simpleType>
- </xs:element>
+    <xs:element name="EdadLimitada">
+      <xs:simpleType>
+        <xs:restriction base="xs:integer">
+          <xs:minInclusive value="0"/>
+          <xs:maxInclusive value="120"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:element>
 
 Este tipo restringe el valor de edad para que esté entre 0 y 120 años.
 
 ## Patrones (expresiones regulares):
 
- <xs:element name="Telefono">
-   <xs:simpleType >
-     <xs:restriction base="xs:string">
-       <xs:pattern value="\d{3}-\d{3}-\d{4}"/>
-     </xs:restriction>
-   </xs:simpleType>
- </xs:element>
+    <xs:element name="Telefono">
+      <xs:simpleType >
+        <xs:restriction base="xs:string">
+          <xs:pattern value="\d{3}-\d{3}-\d{4}"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:element>
 
 Aquí se define un patrón de teléfono que requiere que el valor tenga el formato NNN-NNN-NNNN donde N es un dígito.
 
@@ -147,18 +187,18 @@ Aquí se define un patrón de teléfono que requiere que el valor tenga el forma
 
     Esto permite que el elemento telefono aparezca hasta tres veces en el documento XML, pero puede no aparecer (minOccurs="0").
 
-    Restricción por enumeración:
+## Restricción por enumeración:
 
-<xs:element name="estado">
-    <xs:simpleType>
-        <xs:restriction base="xs:string">
-            <xs:enumeration value="Pendiente"/>
-            <xs:enumeration value="Enviado"/>
-            <xs:enumeration value="Entregado"/>
-            <xs:enumeration value="Cancelado"/>
-        </xs:restriction>
-    </xs:simpleType>
-</xs:element>
+    <xs:element name="estado">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:enumeration value="Pendiente"/>
+                <xs:enumeration value="Enviado"/>
+                <xs:enumeration value="Entregado"/>
+                <xs:enumeration value="Cancelado"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
 
 La restricción enumeration se utiliza para limitar los valores posibles de un elemento. En este caso, el elemento estado solo puede tener uno de los siguientes valores: Pendiente, Enviado, Entregado o Cancelado. Si se proporciona un valor diferente, no será válido.
 

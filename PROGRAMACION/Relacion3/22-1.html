@@ -1,0 +1,33 @@
+<script>
+  let playerUser1 = prompt("Jugador1:  piedra, papel o tijeras");
+  let playerUser2 = prompt("Jugador2:  piedra, papel o tijeras");
+  let mensaje = "";
+
+  if (
+    playerUser1 != "piedra" &&
+    playerUser1 != "papel" &&
+    playerUser1 != "tijeras"
+  ) {
+    mensaje = "Porfas J1 enseñame algo";
+  }
+  if (
+    playerUser2 != "piedra" &&
+    playerUser2 != "papel" &&
+    playerUser2 != "tijeras"
+  ) {
+    mensaje = "Porfas J2 enseñame algo";
+  }
+
+  if (
+    (playerUser1 == "piedra" && playerUser2 == "papel") ||
+    (playerUser1 == "tijeras" && playerUser2 == "piedra") ||
+    (playerUser1 == "papel" && playerUser2 == "tijeras")
+  ) {
+    mensaje = "J2 win";
+  } else if (playerUser1 == playerUser2) {
+    mensaje = "Empate";
+  } else {
+    mensaje = "J1 win";
+  }
+  console.log(mensaje);
+</script>
