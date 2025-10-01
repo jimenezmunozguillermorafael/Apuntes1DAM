@@ -1,14 +1,64 @@
-<?xml version="1.0" encoding="=UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <recetas>
-    <receta>
-        <nombre>Tortilla de patatas</nombre>
-        <ingredientes>Patatas y huevos</ingredientes>
-        <Tiempodepreparación>50 mintos</Tiempodepreparación>
-    </receta>
+  <receta>
+    <nombre>Tortilla de patatas</nombre>
+    <ingredientes>
+      <ingrediente>
+        <nombre>Patatas</nombre>
+        <peso>500g</peso>
+      </ingrediente>
+      <ingrediente>
+        <nombre>Huevos</nombre>
+        <peso>4 unidades</peso>
+      </ingrediente>
+      <ingrediente>
+        <nombre>Cebolla</nombre>
+        <peso>1 unidad</peso>
+      </ingrediente>
+      <ingrediente>
+        <nombre>Aceite</nombre>
+        <peso>50ml</peso>
+      </ingrediente>
+      <ingrediente>
+        <nombre>Sal</nombre>
+        <peso>5g</peso>
+      </ingrediente>
+    </ingredientes>
+    <tiempoPreparacion>30 minutos</tiempoPreparacion>
+  </receta>
 
-    <receta>
-        <nombre>Lasaña</nombre>
-        <ingredientes>Laminas, carne picada,bechamel </ingredientes>
-        <Tiempodeprepación>120 minutos</Tiempodeprepación>
-    </receta>
+  <receta>
+    <nombre>Pasta al pesto</nombre>
+    <ingredientes>
+      <ingrediente>
+        <nombre>Pasta</nombre>
+        <peso>200g</peso>
+      </ingrediente>
+      <ingrediente>
+        <nombre>Albahaca</nombre>
+        <peso>50g</peso>
+      </ingrediente>
+      <ingrediente>
+        <nombre>Ajo</nombre>
+        <peso>2 dientes</peso>
+      </ingrediente>
+      <ingrediente>
+        <nombre>Piñones</nombre>
+        <peso>30g</peso>
+      </ingrediente>
+      <ingrediente>
+        <nombre>Queso</nombre>
+        <peso>50g</peso>
+      </ingrediente>
+      <ingrediente>
+        <nombre>Aceite</nombre>
+        <peso>40ml</peso>
+      </ingrediente>
+      <ingrediente>
+        <nombre>Sal</nombre>
+        <peso>5g</peso>
+      </ingrediente>
+    </ingredientes>
+    <tiempoPreparacion>20 minutos</tiempoPreparacion>
+  </receta>
 </recetas>

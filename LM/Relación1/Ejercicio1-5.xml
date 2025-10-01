@@ -1,22 +1,27 @@
-<?xml version="1.0" encoding="=UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <instituto>
-    <clase>
-        <alumnos>
-            <alumno>
-                <nombre>Juan Carlos</nombre>
-                <edad>26 años</edad>
-                <notaMedia>9</notaMedia>
-            </alumno>
-            <alumno>
-                <nombre>Javi Martinez</nombre>
-                <edad>30 años</edad>
-                <notaMedia>10</notaMedia>
-            </alumno>
-            <alumno>
-                <nombre>Guillermo</nombre>
-                <edad>26 años</edad>
-                <notaMedia>5</notaMedia>
-            </alumno>
-        </alumnos>
-    </clase>
+  <clase>
+    <alumno>
+      <nombre>María</nombre>
+      <edad>18</edad>
+      <notaMedia>8.5</notaMedia>
+    </alumno>
+    <alumno>
+      <nombre>Carlos</nombre>
+      <edad>19</edad>
+      <notaMedia>7.3</notaMedia>
+    </alumno>
+  </clase>
+  <clase>
+    <alumno>
+      <nombre>Elena</nombre>
+      <edad>20</edad>
+      <notaMedia>9.1</notaMedia>
+    </alumno>
+    <alumno>
+      <nombre>Pedro</nombre>
+      <edad>18</edad>
+      <notaMedia>6.8</notaMedia>
+    </alumno>
+  </clase>
 </instituto>

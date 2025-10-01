@@ -1,6 +1,6 @@
 # DTD
 
-Interna. Ejemplo: DTD (7-12) XML (13-17)
+Interna. Ejemplo: 
 
     <!DOCTYPE libro [ 
     <!ELEMENT libro (titulo, autor, editorial)>
@@ -28,7 +28,7 @@ La diferencia entre ambas esta en el inicio en el inicio:
 
 Interna: <!DOCTYPE xxxx [
 
-Externa: <!DOCTYPE xxxx libro SYSTEM "xxxx.dtd"
+Externa: <!DOCTYPE xxxx SYSTEM "xxxx.dtd"
 
 ## Sintaxis de DTD
 

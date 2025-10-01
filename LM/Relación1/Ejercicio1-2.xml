@@ -1,11 +1,21 @@
-<?xml version="1.0" encoding="=UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <alumnos>
-    <alumno>
-        <nombre>Juan Carlos</nombre>
-        <apellidio>Cuadrado</apellidio>
-        <edad>26</edad>
-        <email>jcg@gmail.com</email>
-    </alumno>
-           
+  <alumno>
+    <nombre>Ana</nombre>
+    <apellido>López</apellido>
+    <edad>20</edad>
+    <email>ana.lopez@example.com</email>
+  </alumno>
+  <alumno>
+    <nombre>Javier</nombre>
+    <apellido>Martín</apellido>
+    <edad>22</edad>
+    <email>javier.martin@example.com</email>
+  </alumno>
+  <alumno>
+    <nombre>Lucía</nombre>
+    <apellido>García</apellido>
+    <edad>19</edad>
+    <email>lucia.garcia@example.com</email>
+  </alumno>
 </alumnos>
-    

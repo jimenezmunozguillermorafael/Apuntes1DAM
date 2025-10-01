@@ -110,6 +110,13 @@ for (let i = 0; i<5; i= i+2){
     console.log(i)
 }
 
+<script>
+    for (let i = 0; i < 5; i++) {
+        console.log(i)
+    }
+    
+</script>
+
 ## While
 
 While: El bucle while ejecuta repetidamente un bloque de código mientras una condición sea verdadera. Este bucle es útil cuando no se sabe cuántas iteraciones serán necesarias, y la condición depende de una evaluación dinámica.
@@ -122,3 +129,32 @@ while (contraseña != "QUESO"){
     // Pedir contraseña
 }
 console.log("Correcto")
+
+<script>
+    let contrasenia = prompt("Introduce la contaseña")
+    const NUMEROINTENTOS = 5
+    let contraseniaEncontrada = false
+    const CONTRASENIAAVERIGUAR = "QUESO"
+    let intento = 0
+
+    for (let i = 0; i < NUMEROINTENTOS && !contraseniaEncontrada; i++) {
+        intento = i + 1
+        if (contrasenia == CONTRASENIAAVERIGUAR) {
+            contraseniaEncontrada = true
+        }
+        else {
+            console.log("Contraseña incorrecta: Intento " + intento );
+            contrasenia = prompt("Introduce la contaseña")
+        }
+    }
+
+    if (!contraseniaEncontrada) {
+        console.log("No has averiguado la contraseña en " + NUMEROINTENTOS + " intentos");
+    } else {
+        console.log("Correcto. Has averiguado la contraseña en " + intento + " intentos.");
+
+    }
+
+
+
+</script>
