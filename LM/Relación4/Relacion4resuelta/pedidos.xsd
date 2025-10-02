@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <!-- Raíz: pedidos -->
   <xs:element name="pedidos">
     <xs:complexType>
       <xs:sequence>
@@ -13,6 +15,7 @@
                     <xs:element name="email">
                       <xs:simpleType>
                         <xs:restriction base="xs:string">
+                          <!-- Email simple: usuario@dominio.tld -->
                           <xs:pattern value="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}"/>
                         </xs:restriction>
                       </xs:simpleType>
@@ -20,6 +23,7 @@
                     <xs:element name="telefono">
                       <xs:simpleType>
                         <xs:restriction base="xs:string">
+                          <!-- Formato: XXX-XXX-XXX -->
                           <xs:pattern value="\d{3}-\d{3}-\d{3}"/>
                         </xs:restriction>
                       </xs:simpleType>
@@ -27,6 +31,7 @@
                   </xs:sequence>
                 </xs:complexType>
               </xs:element>
+
               <xs:element name="productos">
                 <xs:complexType>
                   <xs:sequence>
@@ -54,6 +59,7 @@
                   </xs:sequence>
                 </xs:complexType>
               </xs:element>
+
               <xs:element name="estado">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -64,9 +70,11 @@
                 </xs:simpleType>
               </xs:element>
             </xs:sequence>
+
             <xs:attribute name="codigo" use="required">
               <xs:simpleType>
                 <xs:restriction base="xs:string">
+                  <!-- Patrón: A seguido de 3 dígitos -->
                   <xs:pattern value="A\d{3}"/>
                 </xs:restriction>
               </xs:simpleType>
@@ -76,4 +84,5 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+
 </xs:schema>

@@ -205,4 +205,10 @@ La restricción enumeration se utiliza para limitar los valores posibles de un e
 
 Esta restricción es útil para campos que solo pueden aceptar un conjunto específico de valores, como estados, categorías, o niveles.
 
+## Correo , como ponerlo
 
+Expresion regular que cumpla ese valor:
+
+[A-Za-z0-9._%+-]+ @ [A-Za-z0-9.-]+ \. [A-Za-z]{2,} "/
+
+##

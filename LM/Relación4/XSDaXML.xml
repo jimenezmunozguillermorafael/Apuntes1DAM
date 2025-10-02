@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<calendario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="XSDaXML.xsd">
+    <evento id="1">
+        <titulo>Navidad</titulo>
+        <fecha>2025-12-25</fecha>
+        <hora>13:30:30</hora>
+        <ubicacion>Granada</ubicacion>
+        <codigoPostal>18005</codigoPostal>
+    </evento>
+</calendario>

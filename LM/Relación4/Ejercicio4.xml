@@ -1,0 +1,39 @@
+<!--Diseña desde cero un XML y su XSD para un sistema escolar con estas características:
+
+    El documento tiene un elemento raíz clase.
+    La clase contiene varios alumno.
+    Cada alumno tiene:
+        nombre (cadena que debe empezar con mayúscula, regex).
+        edad (entero entre 6 y 18).
+        Una lista de nota (decimal entre 0 y 10, puede haber entre 1 y 5 notas).
+        Un dni que siga el formato 8 dígitos + 1 letra (regex).
+    El alumno debe tener un atributo id único (entero positivo).
+
+👉 Tu tarea:
+
+    Define el XSD.
+    Escribe un XML con al menos 2 alumnos y sus notas.
+-->
+    <?xml version="1.0" encoding="UTF-8"?>
+<juegos xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="Ejercicio4.xsd">
+    <juego>
+        <titulo></titulo>
+        <precio></precio>
+        <plataforma></plataforma>
+        <lanzamiento></lanzamiento>
+    </juego>
+    <juego>
+        <titulo></titulo>
+        <precio></precio>
+        <plataforma></plataforma>
+        <lanzamiento></lanzamiento>
+    </juego>
+    <juego>
+        <titulo></titulo>
+        <precio></precio>
+        <plataforma></plataforma>
+        <lanzamiento></lanzamiento>
+    </juego>
+   
+</juegos>

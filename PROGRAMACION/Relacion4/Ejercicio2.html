@@ -1,0 +1,18 @@
+<script>
+//Escribe un programa que pida al usuario un número secreto (entre 1 y 10).
+//Después, el programa debe pedir al jugador que adivine el número hasta que lo consiga, mostrando un mensaje de “Intenta de nuevo” cuando falle.
+
+//Cuando acierte, debe mostrar:
+
+//¡Correcto! Has adivinado el número.
+
+
+let secretNumber = 7
+let numberUser = Number(prompt("Introduce un numero"))
+
+while (numberUser != secretNumber){
+    console.log("Intentalo de nuevo")
+    numberUser = Number(prompt("Introduce un numero"))
+}   console.log("correcto ese es el numero secreto")
+
+</script>
