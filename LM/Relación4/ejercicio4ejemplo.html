@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <!-- 1. Definición del tipo simple para 'estado' (Restricción por Enumeración) -->
+  <xs:simpleType name="TipoEstado">
+    <xs:restriction base="xs:string">
+      <!-- El XML muestra 'Enviado' [2] -->
+      <xs:enumeration value="Enviado" /> [8]
+      <xs:enumeration value="Pendiente" /> [8]
+      <xs:enumeration value="Entregado" /> [8]
+      <xs:enumeration value="Cancelado" /> [8]
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- 2. Definición del tipo complejo para 'producto' -->
+  <xs:complexType name="TipoProducto">
+    [6]
+    <xs:sequence>
+      [6] <xs:element name="nombre" type="xs:string" /> [1, 7]
+      <!-- El precio es decimal (ej. 19.95) [1] -->
+      <xs:element name="precio" type="xs:decimal" /> [1, 7]
+      <!-- La cantidad es un entero (ej. 2) [1] -->
+      <xs:element name="cantidad" type="xs:integer" /> [1, 7]
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- 3. Definición del tipo complejo para 'productos' (contenedor de uno o más productos) -->
+  <xs:complexType name="TipoProductos">
+    <xs:sequence>
+      [6]
+      <!-- El elemento 'producto' aparece una o más veces [1] -->
+      <xs:element name="producto" type="TipoProducto" maxOccurs="unbounded" />
+      [9]
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- 4. Definición del tipo complejo para 'cliente' -->
+  <xs:complexType name="TipoCliente">
+    [6]
+    <xs:sequence>
+      [6] <xs:element name="nombre" type="xs:string" /> [1, 7]
+      <xs:element name="email" type="xs:string" /> [1, 7]
+      <!-- Corregido: 'telefono' debe ser string debido al formato [1] -->
+      <xs:element name="telefono" type="xs:string" /> [1, 7]
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- 5. Definición del tipo complejo para 'pedido' (incluyendo el atributo y los subelementos) -->
+  <xs:complexType name="TipoPedido">
+    [6]
+    <xs:sequence>
+      [6] <xs:element name="cliente" type="TipoCliente" /> [1]
+      <xs:element name="productos" type="TipoProductos" /> [1, 2]
+      <xs:element name="estado" type="TipoEstado" /> [2]
+    </xs:sequence>
+    <!-- Definición del atributo 'codigo' (ej. A101) [1] -->
+    <xs:attribute name="codigo" type="xs:string" use="required" /> [1]
+  </xs:complexType>
+
+  <!-- 6. Definición del elemento raíz 'pedidos' -->
+  <xs:element name="pedidos">
+    [5]
+    <xs:complexType>
+      [6]
+      <xs:sequence>
+        [6]
+        <!-- El elemento 'pedido' es un subelemento y puede aparecer varias veces -->
+        <xs:element name="pedido" type="TipoPedido" maxOccurs="unbounded" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

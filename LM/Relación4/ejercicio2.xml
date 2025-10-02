@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<pedidos xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="pedidos.xsd">
 <pedidos>
   <pedido codigo="A101">
     <cliente>
