@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="colegio">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name = "clase" minOccurs="1" maxOccurs="3">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name = "alumno" minOccurs="1" maxOccurs="3">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name = "nombre">
+                                            <xs:simpleType>
+                                                <xs:restriction base = "xs:string">
+                                                    <xs:pattern value="[A-Z][a-z]+( [A-Z][a-z]+)*"/>
+
+                                                </xs:restriction>
+                                            </xs:simpleType>
+
+                                        </xs:element>
+                                        <xs:element name = "edad">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:integer">
+                                                    <xs:minInclusive value="6"/>
+                                                    <xs:maxInclusive value="18"/>
+                                                    
+
+                                                </xs:restriction>
+                                            </xs:simpleType>
+
+                                        </xs:element>
+                                        <xs:element name = "nota" minOccurs="1" maxOccurs="5">
+                                            <xs:simpleType>
+                                                <xs:restriction base= "xs:decimal">
+                                                    <xs:minInclusive value="0"/>
+                                                    <xs:maxInclusive value="10"/>
+                                                    <xs:fractionDigits value="2"/>
+
+                                                </xs:restriction>
+                                            </xs:simpleType>
+
+                                        </xs:element>
+                                        <xs:element name = "dni">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:pattern value="\d{8}[A-Z]"/>
+
+                                                </xs:restriction>
+
+                                            </xs:simpleType>
+
+                                        </xs:element>
+                                    </xs:sequence>
+                                    <xs:attribute name="id" type="xs:positiveInteger" use="required"/>
+                                </xs:complexType>
+
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+        
+    </xs:element>
+</xs:schema>

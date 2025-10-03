@@ -1,0 +1,89 @@
+<!--Diseña desde cero un XML y su XSD para un sistema escolar con estas características:
+
+    El documento tiene un elemento raíz clase.
+    La clase contiene varios alumno.
+    Cada alumno tiene:
+        nombre (cadena que debe empezar con mayúscula, regex).
+        edad (entero entre 6 y 18).
+        Una lista de nota (decimal entre 0 y 10, puede haber entre 1 y 5 notas).
+        Un dni que siga el formato 8 dígitos + 1 letra (regex).
+    El alumno debe tener un atributo id único (entero positivo).
+
+👉 Tu tarea:
+
+    Define el XSD.
+    Escribe un XML con al menos 2 alumnos y sus notas.
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+
+<colegio xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="XML_XSD.xsd">
+    <clase>
+    <alumno id ="1">
+        <nombre>Juan</nombre>
+        <edad>26</edad>
+        <nota>9.75</nota>
+        <dni>23456997z</dni>       
+    </alumno>
+    <alumno id ="2">
+        <nombre>Juan</nombre>
+        <edad>26</edad>
+        <nota>9.75</nota>
+        <dni>23456997z</dni>    
+    </alumno>
+    <alumno id ="3">
+        <nombre>Juan</nombre>
+        <edad>26</edad>
+        <nota>9.75</nota>
+        <dni>23456997z</dni>        
+    </alumno>
+    
+</clase>
+    
+    <clase>
+
+    <alumno id= "4">
+        <nombre>Pepe</nombre>
+        <edad>24</edad>
+        <nota>5</nota>
+        <dni>12345678T</dni>
+    </alumno>
+    <alumno id ="5">
+        <nombre>Juan</nombre>
+        <edad>26</edad>
+        <nota>9.75</nota>
+        <dni>23456997z</dni>        
+    </alumno>
+    <alumno id ="6">
+        <nombre>Juan</nombre>
+        <edad>26</edad>
+        <nota>9.75</nota>
+        <dni>23456997z</dni>           
+    </alumno>   
+    
+</clase>
+    
+    <clase>
+        <alumno id ="7">
+        <nombre>Juan</nombre>
+        <edad>26</edad>
+        <nota>9.75</nota>
+        <dni>23456997z</dni>
+        
+    </alumno>
+        <alumno id ="8">
+        <nombre>Zote</nombre>
+        <edad>25</edad>
+        <nota>0.5</nota>
+        <dni>98765432E</dni>
+    </alumno>
+    <alumno id ="9">
+        <nombre>Juan</nombre>
+        <edad>26</edad>
+        <nota>9.75</nota>
+        <dni>23456997z</dni>       
+    </alumno>
+    
+</clase>
+   
+</colegio>
