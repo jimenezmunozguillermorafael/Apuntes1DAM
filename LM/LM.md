@@ -69,7 +69,7 @@ La sintaxis de XSD utiliza etiquetas XML para definir la estructura y los tipos 
 
 La etiqueta principal en un esquema XSD es <xs:schema>
 
-structura básica de un esquema XSD:
+## Estructura básica de un esquema XSD:
 
     <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
       <xs:element name="persona">
@@ -208,11 +208,11 @@ Esta restricción es útil para campos que solo pueden aceptar un conjunto espec
 
 ## Correo , como ponerlo
 
-Expresion regular que cumpla ese valor:
+Expresion regular que cumpla ese valor: jcorreoelectronico@gmail.com
 
 [A-Za-z0-9._%+-]+ @ [A-Za-z0-9.-]+ \. [A-Za-z]{2,} "/
 
-## DNI, como ponerlo XXXXXXXV
+## DNI, como ponerlo XXXXXXX"LETRA"
 
 <xs:simpleType name="dniType">
 <xs:restriction base="xs:string">
@@ -220,7 +220,15 @@ Expresion regular que cumpla ese valor:
 </xs:restriction>
 </xs:simpleType>
 
-## Numero de telefono XXX XXX XXX
+## Numero de telefono XXX - XXX - XXX
+
+<xs:element name="telefono">
+   <xs:simpleType>
+      <xs:restriction base="xs:string">
+         <xs:pattern value="\d{3}-\d{3}-\d{3}"/>
+      </xs:restriction>
+     </xs:simpleType>
+ </xs:element>
 
 ## Nombre , cadena que empieza por mayuscula
 

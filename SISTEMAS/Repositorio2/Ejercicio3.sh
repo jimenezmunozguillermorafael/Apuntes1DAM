@@ -16,4 +16,9 @@ mv src/script1.sh test/resultados/
 mv script1.sh script_final.txt
 
 ##3 
-## mv rutadirectorio 
+## Hemos movido backup_docs de proyecto a logs
+mv ../backup_docs .
+##Ahora estamos en docs y backup_docs esta dentro de docs
+mv ./backup_docs test/resultados
+##Ahora para mover backup_docs que esta en docs a test/resultados
+

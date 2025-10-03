@@ -29,26 +29,17 @@
 #!/bin/bash
 ## Ir a la ruta y despues crear 
 # mkdir -p proyecto/{docs,src/modulos,config,logs/backup,test/resultados}; 
-# cd /home/alumnoT/Documentos/GithubTarde/proyecto/
-# touch /home/alumnoT/Documentos/GithubTarde/proyecto/docs/{manual.txt,guia.txt,referencnias.txt}; 
-# touch /home/alumnoT/Documentos/GithubTarde/proyecto/src/{script1.sh,script2.sh}; 
-# touch /home/alumnoT/Documentos/GithubTarde/proyecto/src/modulos/modulo1.py;
-# touch /home/alumnoT/Documentos/GithubTarde/proyecto/config/{app.cfg,db.cfg};
-# touch /home/alumnoT/Documentos/GithubTarde/proyecto/logs/{acecess.log,error.log};
-# touch /home/alumnoT/Documentos/GithubTarde/proyecto/logs/backup/backup1.log;
-# touch /home/alumnoT/Documentos/GithubTarde/proyecto/test/{test1.txt,test2.txt}
-# touch /home/alumnoT/Documentos/GithubTarde/proyecto/test/resultados/resultados1.txt
+
  
  #!/bin/bash
-## Ir a la ruta y despues crear 
-mkdir -p proyecto/{docs,src/modulos,config,logs/backup,test/resultados}; 
-# cd /home/alumnoT/Documentos/GithubTarde/proyecto/
-touch /c/Users/guill/Documents/GradoDAM/Apuntes1DAM/SISTEMAS/Repositorio2/proyecto/docs/{manual.txt,guia.txt,referencnias.txt}; 
-touch /c/Users/guill/Documents/GradoDAM/Apuntes1DAM/SISTEMAS/Repositorio2/proyecto/src/{script1.sh,script2.sh}; 
-touch /c/Users/guill/Documents/GradoDAM/Apuntes1DAM/SISTEMAS/Repositorio2/proyecto/src/modulos/modulo1.py;
-touch /c/Users/guill/Documents/GradoDAM/Apuntes1DAM/SISTEMAS/Repositorio2/proyecto/config/{app.cfg,db.cfg};
-touch /c/Users/guill/Documents/GradoDAM/Apuntes1DAM/SISTEMAS/Repositorio2/proyecto/logs/{acecess.log,error.log};
-touch /c/Users/guill/Documents/GradoDAM/Apuntes1DAM/SISTEMAS/Repositorio2/proyecto/logs/backup/backup1.log;
-touch /c/Users/guill/Documents/GradoDAM/Apuntes1DAM/SISTEMAS/Repositorio2/proyecto/test/{test1.txt,test2.txt};
-touch /c/Users/guill/Documents/GradoDAM/Apuntes1DAM/SISTEMAS/Repositorio2/proyecto/test/resultados/resultados1.txt;
- 
+
+mkdir -p ~/Escritorio/proyecto/{docs,src/modulos,config,logs/backup,test/resultados} && \
+touch ~/Escritorio/proyecto/docs/{manual,guia,referencias}.txt \
+~/Escritorio/proyecto/src/{script1,script2}.sh \
+~/Escritorio/proyecto/src/modulos/modulo1.py \
+~/Escritorio/proyecto/config/{app,db}.cfg \
+~/Escritorio/proyecto/logs/{access,error}.log \
+~/Escritorio/proyecto/logs/backup/backup1.log \
+~/Escritorio/proyecto/test/{test1,test2}.txt \
+~/Escritorio/proyecto/test/resultados/resultados1.txt
+
