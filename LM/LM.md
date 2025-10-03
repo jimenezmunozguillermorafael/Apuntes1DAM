@@ -1,8 +1,8 @@
 # DTD
 
-Interna. Ejemplo: 
+Interna. Ejemplo:
 
-    <!DOCTYPE libro [ 
+    <!DOCTYPE libro [
     <!ELEMENT libro (titulo, autor, editorial)>
     <!ELEMENT titulo (#PCDATA)>
     <!ELEMENT autor (#PCDATA)>
@@ -14,8 +14,7 @@ Interna. Ejemplo:
         <editorial>Editorial Ejemplo</editorial>
     </libro>
 
-
-Externa. Ejemplo: 
+Externa. Ejemplo:
 
     <!DOCTYPE libro SYSTEM "libro.dtd">
     <libro>
@@ -24,7 +23,7 @@ Externa. Ejemplo:
         <editorial>Editorial Ejemplo</editorial>
     </libro>
 
-La diferencia entre ambas esta en el inicio en el inicio: 
+La diferencia entre ambas esta en el inicio en el inicio:
 
 Interna: <!DOCTYPE xxxx [
 
@@ -35,7 +34,7 @@ Externa: <!DOCTYPE xxxx SYSTEM "xxxx.dtd"
 La sintaxis de DTD define qué elementos y atributos están permitidos en un documento XML, la relación entre ellos y el número de veces que pueden aparecer. La DTD utiliza una notación particular para describir la estructura del documento, que debe seguirse estrictamente para que un documento XML sea considerado válido según las reglas de su DTD.
 Componentes principales de la sintaxis DTD:
 
- Esta declaración define el tipo de documento y hace referencia a la DTD, ya sea interna o externa. Se coloca al principio del documento XML, antes del primer elemento.
+Esta declaración define el tipo de documento y hace referencia a la DTD, ya sea interna o externa. Se coloca al principio del documento XML, antes del primer elemento.
 
     Ejemplo de una DTD interna:
 
@@ -54,19 +53,19 @@ Elementos de texto: Utilizan #PCDATA (parsed character data), que indica que el 
 
 Elementos hijos: Pueden contener otros elementos como hijos, definidos en secuencia o como opciones.
 
-Cantidad de ocurrencias: El número de veces que un elemento puede aparecer se define mediante los operadores +, *, ?:
-        
+Cantidad de ocurrencias: El número de veces que un elemento puede aparecer se define mediante los operadores +, \*, ?:
+
     + indica que el elemento debe aparecer al menos una vez.
-       
+
     * indica que el elemento puede aparecer cero o más veces.
-        
+
     ? indica que el elemento es opcional y puede aparecer una o ninguna vez.
 
 El DTD nos avisa si nuestro XML esta mal.
 
 # XSD
 
-La sintaxis de XSD utiliza etiquetas XML para definir la estructura y los tipos de datos de un documento. 
+La sintaxis de XSD utiliza etiquetas XML para definir la estructura y los tipos de datos de un documento.
 
 La etiqueta principal en un esquema XSD es <xs:schema>
 
@@ -89,7 +88,7 @@ structura básica de un esquema XSD:
 
 <xs:element>: Se utiliza para declarar un elemento. En este caso, se define un elemento llamado persona, que es un contenedor para otros elementos (nombre y edad). Cada elemento puede tener atributos adicionales como el tipo de datos y restricciones específicas.
 
- <xs:complexType>: Los tipos complejos permiten definir estructuras que contienen otros elementos. En el caso de persona, el tipo complejo permite contener una secuencia de subelementos como nombre y edad.
+<xs:complexType>: Los tipos complejos permiten definir estructuras que contienen otros elementos. En el caso de persona, el tipo complejo permite contener una secuencia de subelementos como nombre y edad.
 
 <xs:sequence>: Dentro de un tipo complejo, una secuencia indica que los subelementos deben aparecer en el orden especificado. En este caso, nombre debe aparecer antes que edad dentro de cualquier instancia del elemento persona.
 
@@ -124,6 +123,7 @@ XSD permite imponer restricciones adicionales sobre los valores que pueden conte
         </xs:restriction>
       </xs:simpleType>
     </xs:element>
+
 Este tipo restringe el valor de edad para que esté entre 0 y 120 años.
 
 ## Patrones (expresiones regulares):
@@ -135,6 +135,7 @@ Este tipo restringe el valor de edad para que esté entre 0 y 120 años.
         </xs:restriction>
       </xs:simpleType>
     </xs:element>
+
 Aquí se define un patrón de teléfono que requiere que el valor tenga el formato NNN-NNN-NNNN donde N es un dígito.
 
 ## Cardinalidad (número de ocurrencias):
@@ -210,5 +211,23 @@ Esta restricción es útil para campos que solo pueden aceptar un conjunto espec
 Expresion regular que cumpla ese valor:
 
 [A-Za-z0-9._%+-]+ @ [A-Za-z0-9.-]+ \. [A-Za-z]{2,} "/
+
+## DNI, como ponerlo XXXXXXXV
+
+<xs:simpleType name="dniType">
+<xs:restriction base="xs:string">
+<xs:pattern value="\d{8}[A-Z]"/>
+</xs:restriction>
+</xs:simpleType>
+
+## Numero de telefono XXX XXX XXX
+
+## Nombre , cadena que empieza por mayuscula
+
+<xs:simpleType name="nombreType">
+<xs:restriction base="xs:string">
+<xs:pattern value="[A-Z][a-z]+( [A-Z][a-z]+)\*"/>
+</xs:restriction>
+</xs:simpleType>
 
 ##
