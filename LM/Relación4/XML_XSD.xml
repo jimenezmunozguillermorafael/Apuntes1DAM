@@ -15,7 +15,6 @@
     Escribe un XML con al menos 2 alumnos y sus notas.
 -->
 <?xml version="1.0" encoding="UTF-8"?>
-
 <colegio xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:noNamespaceSchemaLocation="XML_XSD.xsd">
     <clase>
