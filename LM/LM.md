@@ -1,27 +1,25 @@
+# XML
+
+## Sintaxis básica de xml
+
+## Estructura inicial
+
+<?xml version="1.0" encoding="UTF-8"?>
+<raiz>
+    <elemento atributo="valor">Contenido del elemento</elemento>
+    <elementoVacio atributo="valor"/>
+</raiz>
+
+## Reglas de sintaxis de XML:
+
+<raiz>
+  <hijo1>
+  <hijo2></hijo1>
+</hijo2>
+
 # DTD
 
 Interna. Ejemplo:
-
-    <!DOCTYPE libro [
-    <!ELEMENT libro (titulo, autor, editorial)>
-    <!ELEMENT titulo (#PCDATA)>
-    <!ELEMENT autor (#PCDATA)>
-    <!ELEMENT editorial (#PCDATA)>
-    ]>
-    <libro>
-        <titulo>Aprendiendo XML</titulo>
-        <autor>Juan Pérez</autor>
-        <editorial>Editorial Ejemplo</editorial>
-    </libro>
-
-Externa. Ejemplo:
-
-    <!DOCTYPE libro SYSTEM "libro.dtd">
-    <libro>
-        <titulo>Aprendiendo XML</titulo>
-        <autor>Juan Pérez</autor>
-        <editorial>Editorial Ejemplo</editorial>
-    </libro>
 
 La diferencia entre ambas esta en el inicio en el inicio:
 
@@ -36,14 +34,14 @@ Componentes principales de la sintaxis DTD:
 
 Esta declaración define el tipo de documento y hace referencia a la DTD, ya sea interna o externa. Se coloca al principio del documento XML, antes del primer elemento.
 
-    Ejemplo de una DTD interna:
+## Ejemplo de una DTD interna:
 
     <!DOCTYPE raiz [
     <!ELEMENT raiz (hijo)>
     <!ELEMENT hijo (#PCDATA)>
     ]>
 
-Ejemplo de una DTD externa:
+## Ejemplo de una DTD externa:
 
 <!DOCTYPE libro SYSTEM "libro.dtd">
 
@@ -57,7 +55,7 @@ Cantidad de ocurrencias: El número de veces que un elemento puede aparecer se d
 
     + indica que el elemento debe aparecer al menos una vez.
 
-    * indica que el elemento puede aparecer cero o más veces.
+    \* indica que el elemento puede aparecer cero o más veces.
 
     ? indica que el elemento es opcional y puede aparecer una o ninguna vez.
 
@@ -210,9 +208,9 @@ Esta restricción es útil para campos que solo pueden aceptar un conjunto espec
 
 Expresion regular que cumpla ese valor: jcorreoelectronico@gmail.com
 
-[A-Za-z0-9._%+-]+ @ [A-Za-z0-9.-]+ \. [A-Za-z]{2,} "/
+<xs:pattern value="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}"/>
 
-## DNI, como ponerlo XXXXXXX"LETRA"
+## DNI, como ponerlo XXXXXXXX + "LETRA"
 
 <xs:simpleType name="dniType">
 <xs:restriction base="xs:string">
@@ -223,14 +221,14 @@ Expresion regular que cumpla ese valor: jcorreoelectronico@gmail.com
 ## Numero de telefono XXX - XXX - XXX
 
 <xs:element name="telefono">
-   <xs:simpleType>
-      <xs:restriction base="xs:string">
-         <xs:pattern value="\d{3}-\d{3}-\d{3}"/>
-      </xs:restriction>
-     </xs:simpleType>
- </xs:element>
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:pattern value="\d{3}-\d{3}-\d{3}"/>
+</xs:restriction>
+</xs:simpleType>
+</xs:element>
 
-## Nombre , cadena que empieza por mayuscula
+## Nombre , cadena que empieza por mayuscula Con \* al final
 
 <xs:simpleType name="nombreType">
 <xs:restriction base="xs:string">
@@ -238,4 +236,20 @@ Expresion regular que cumpla ese valor: jcorreoelectronico@gmail.com
 </xs:restriction>
 </xs:simpleType>
 
-##
+## Nombre y Apellido para español con Ñ incluida y tildes
+
+<xs:pattern value="[A-ZÁÉÍÓÚÜÑ][a-záéíóúüñ]+ [A-ZÁÉÍÓÚÜÑ][a-záéíóúüñ]+"/>
+
+## Direccion. Ejemplo "Calle de Jueves" camino, ronda etc
+
+<xs:pattern value="((Calle|Avenida|Avda\.|Plaza|Pza\.|Paseo|Ps\.|Ronda|Camino|Ctra\.|Carretera|Travesía|Trav\.|Vía|Via|Polígono|Poligono|Urbanización|Urb\.|Barrio|Lugar|C/) )?((de|del|la|las|los|y|San|Santa) )_[\p{Lu}][\p{Ll}\p{M}'-]+( ((de|del|la|las|los|y|San|Santa) )_[\p{Lu}][\p{Ll}\p{M}'-]+)\*"/>
+
+## IBSN
+
+<xs:element name="isbn">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:pattern value="\d{3}-\d{2}-\d{4}-\d{3}-\d"/>
+</xs:restriction>
+</xs:simpleType>
+</xs:element>
