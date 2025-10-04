@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE catalogo [
+    <!ELEMENT catalogo (juego+)>
+    <!ELEMENT juego (nombre, genero, desarrollador, edad, id)>
+    <!ELEMENT nombre (#PCDATA)>
+    <!ELEMENT genero (#PCDATA)>
+    <!ELEMENT desarrollador (#PCDATA)>
+    <!ELEMENT edad (#PCDATA)>
+    <!ELEMENT id (#PCDATA)>
+]>
+<catalogo>
+    <juego>
+     <nombre>Bloodborne</nombre>
+        <genero>Soulslike</genero>
+        <desarrollador>Fromtsoftware</desarrollador>
+        <edad>18</edad>
+        <id>13345678B</id>
+    </juego>
+    <juego>
+        <nombre>Borderlands</nombre>
+        <genero>Lootershoter</genero>
+        <desarrollador>Fromtsoftware</desarrollador>
+        <edad>18</edad>
+        <id>12345678M</id>
+    </juego>
+    <juego>
+        <nombre>Silksong</nombre>
+        <genero>Metroidvania</genero>
+        <desarrollador>Cherry Team</desarrollador>
+        <edad>12</edad>
+        <id>7894561K</id>
+    </juego>   
+</catalogo>

@@ -1,0 +1,9 @@
+<!ELEMENT cartera (cliente+)>
+<!ELEMENT cliente (nombre, direccion, codigoP, DNI, telefono, altura, email)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT direccion (#PCDATA)>
+<!ELEMENT codigoP (#PCDATA)>
+<!ELEMENT DNI (#PCDATA)>
+<!ELEMENT telefono (#PCDATA)>
+<!ELEMENT altura (#PCDATA)>
+<!ELEMENT email (#PCDATA)>

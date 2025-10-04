@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<cartera xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="cartera.xsd">
+
+    <cliente>
+        <nombre>Maria Zorro</nombre>
+        <direccion>Calle Afan</direccion>
+        <codigoP>18005</codigoP>
+        <DNI>12345678L</DNI>
+        <telefono>123-457-896</telefono>
+        <altura>1.65</altura>
+        <email>mariazorro@gmail.com</email>
+    </cliente>
+    <cliente>
+        <nombre>Juan Carlos</nombre>
+        <direccion>Calle Jueves</direccion>
+        <codigoP>18100</codigoP>
+        <DNI>78945612M</DNI>
+        <telefono>123-457-896</telefono>
+        <altura>1.90</altura>
+        <email>juancarloscuadrado@gmail.com</email>
+    </cliente>
+    <cliente>
+        <nombre>Alejandro Lozano</nombre>
+        <direccion>Calle Atenea</direccion>
+        <codigoP>17009</codigoP>
+        <DNI>45678912P</DNI>
+        <telefono>123-457-896</telefono>
+        <altura>1.79</altura>
+        <email>alejandrolozanolopez@gmail.com</email>
+    </cliente>
+    <cliente>
+        <nombre>Javi Martin</nombre>
+        <direccion>Calle Martes</direccion>
+        <codigoP>12345</codigoP>
+        <DNI>12457836M</DNI>
+        <telefono>123-457-896</telefono>
+        <altura>1.75</altura>
+        <email>javimartinozalkd@gmail.com</email>
+    </cliente>
+</cartera>

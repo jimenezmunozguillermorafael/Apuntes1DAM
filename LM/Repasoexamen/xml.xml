@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalogo>
+    <juego>
+     <nombre>Bloodborne</nombre>
+        <genero>Soulslike</genero>
+        <desarrollador>Fromtsoftware</desarrollador>
+        <edad>18</edad>
+    </juego>
+    <juego>
+        <nombre>Bloodborne</nombre>
+        <genero>Soulslike</genero>
+        <desarrollador>Fromtsoftware</desarrollador>
+        <edad>18</edad>
+    </juego>
+    <juego>
+        <nombre>Bloodborne</nombre>
+        <genero>Soulslike</genero>
+        <desarrollador>Fromtsoftware</desarrollador>
+        <edad>18</edad>
+    </juego>   
+</catalogo>
