@@ -10,7 +10,7 @@
                                 <xs:simpleType>
                                     <xs:restriction base="xs:string">
                                         <xs:pattern value ="[A-ZÁÉÍÓÚÜÑ][a-záéíóúüñ]+ [A-ZÁÉÍÓÚÜÑ][a-záéíóúüñ]+"/>
-                                       
+                                        
 
                                     </xs:restriction>
                                 </xs:simpleType>

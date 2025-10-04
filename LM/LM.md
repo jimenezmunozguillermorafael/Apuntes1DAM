@@ -37,8 +37,8 @@ Esta declaración define el tipo de documento y hace referencia a la DTD, ya sea
 ## Ejemplo de una DTD interna:
 
     <!DOCTYPE raiz [
-    <!ELEMENT raiz (hijo)>
-    <!ELEMENT hijo (#PCDATA)>
+      <!ELEMENT raiz (hijo)>
+      <!ELEMENT hijo (#PCDATA)>
     ]>
 
 ## Ejemplo de una DTD externa:
@@ -218,7 +218,7 @@ Expresion regular que cumpla ese valor: jcorreoelectronico@gmail.com
 </xs:restriction>
 </xs:simpleType>
 
-## Numero de telefono XXX - XXX - XXX
+## Numero de telefono XXX-XXX-XXX
 
 <xs:element name="telefono">
 <xs:simpleType>
