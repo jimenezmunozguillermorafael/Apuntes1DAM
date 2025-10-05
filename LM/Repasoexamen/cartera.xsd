@@ -6,6 +6,7 @@
                 <xs:element name = "cliente" minOccurs="1" maxOccurs="4">
                     <xs:complexType>
                         <xs:sequence>
+                            <!--Nombre y Apellido-->
                             <xs:element name = "nombre">
                                 <xs:simpleType>
                                     <xs:restriction base="xs:string">
@@ -23,7 +24,7 @@
 
                                     </xs:restriction>
                                 </xs:simpleType>
-
+                              <!--Código Postal 17263 -->
                             </xs:element>
                             <xs:element name = "codigoP">
                                 <xs:simpleType>
@@ -33,7 +34,7 @@
 
                                     </xs:restriction>
                                 </xs:simpleType>
-
+                              <!--DNI 17369918N -->
                             </xs:element>
                             <xs:element name = "DNI">
                                 <xs:simpleType>
@@ -42,7 +43,7 @@
 
                                     </xs:restriction>
                                 </xs:simpleType>
-
+                            <!-- 569-980-253-->
                             </xs:element>
                             <xs:element name = "telefono">
                                 <xs:simpleType>
@@ -51,7 +52,7 @@
 
                                     </xs:restriction>
                                 </xs:simpleType>
-
+                            <!--Altura con dos decimales -->
                             </xs:element>
                             <xs:element name = "altura">
                                 <xs:simpleType>
@@ -60,7 +61,7 @@
 
                                     </xs:restriction>
                                 </xs:simpleType>
-
+                             <!--guillejmo@gmail.com-->
                             </xs:element>
                             <xs:element name= "email">
                                 <xs:simpleType>
@@ -72,6 +73,7 @@
 
                             </xs:element>
                         </xs:sequence>
+                        <xs:attribute name ="id" type="xs:ID" use= "required"/>
                     </xs:complexType>
 
                 </xs:element>

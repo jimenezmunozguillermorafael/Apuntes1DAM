@@ -3,7 +3,7 @@
 <cartera xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:noNamespaceSchemaLocation="cartera.xsd">
 
-    <cliente>
+    <cliente id = "C1">
         <nombre>Maria Zorro</nombre>
         <direccion>Calle Afan</direccion>
         <codigoP>18005</codigoP>
@@ -12,7 +12,7 @@
         <altura>1.65</altura>
         <email>mariazorro@gmail.com</email>
     </cliente>
-    <cliente>
+    <cliente id = "C2">
         <nombre>Juan Carlos</nombre>
         <direccion>Calle Jueves</direccion>
         <codigoP>18100</codigoP>
@@ -21,7 +21,7 @@
         <altura>1.90</altura>
         <email>juancarloscuadrado@gmail.com</email>
     </cliente>
-    <cliente>
+    <cliente id = "C3">
         <nombre>Alejandro Lozano</nombre>
         <direccion>Calle Atenea</direccion>
         <codigoP>17009</codigoP>
@@ -30,7 +30,7 @@
         <altura>1.79</altura>
         <email>alejandrolozanolopez@gmail.com</email>
     </cliente>
-    <cliente>
+    <cliente id = "C4">
         <nombre>Javi Martin</nombre>
         <direccion>Calle Martes</direccion>
         <codigoP>12345</codigoP>
