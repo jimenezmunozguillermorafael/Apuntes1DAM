@@ -1,79 +1,84 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
-    
+
     <xs:element name="cartera">
         <xs:complexType>
             <xs:sequence>
-                <xs:element name = "cliente" minOccurs="1" maxOccurs="4">
+                <xs:element name="cliente" minOccurs="1" maxOccurs="4">
                     <xs:complexType>
                         <xs:sequence>
-                            <!--Nombre y Apellido-->
-                            <xs:element name = "nombre">
+                            <!--Nombre
+                            y Apellido-->
+                            <xs:element name="nombre">
                                 <xs:simpleType>
                                     <xs:restriction base="xs:string">
-                                        <xs:pattern value ="[A-ZÁÉÍÓÚÜÑ][a-záéíóúüñ]+ [A-ZÁÉÍÓÚÜÑ][a-záéíóúüñ]+"/>
-                                        
+                                        <xs:pattern
+                                            value="[A-ZÁÉÍÓÚÜÑ][a-záéíóúüñ]+ [A-ZÁÉÍÓÚÜÑ][a-záéíóúüñ]+" />
+
 
                                     </xs:restriction>
                                 </xs:simpleType>
 
                             </xs:element>
-                            <xs:element name = "direccion">
-                                <xs:simpleType>
-                                    <xs:restriction base ="xs:string">
-                                        <xs:pattern value="[A-ZÁÉÍÓÚÜÑ][a-záéíóúüñ]+ [A-ZÁÉÍÓÚÜÑ][a-záéíóúüñ]+"/>
-
-                                    </xs:restriction>
-                                </xs:simpleType>
-                              <!--Código Postal 17263 -->
-                            </xs:element>
-                            <xs:element name = "codigoP">
-                                <xs:simpleType>
-                                    <xs:restriction base = "xs:string">
-                                        <xs:pattern value="[0-9]{5}"/>
-                                      
-
-                                    </xs:restriction>
-                                </xs:simpleType>
-                              <!--DNI 17369918N -->
-                            </xs:element>
-                            <xs:element name = "DNI">
-                                <xs:simpleType>
-                                    <xs:restriction base ="xs:string">
-                                        <xs:pattern value="\d{8}[A-Z]"/>
-
-                                    </xs:restriction>
-                                </xs:simpleType>
-                            <!-- 569-980-253-->
-                            </xs:element>
-                            <xs:element name = "telefono">
+                            <xs:element name="direccion">
                                 <xs:simpleType>
                                     <xs:restriction base="xs:string">
-                                        <xs:pattern value="\d{3}-\d{3}-\d{3}"/>
+                                        <xs:pattern
+                                            value="[A-ZÁÉÍÓÚÜÑ][a-záéíóúüñ]+ [A-ZÁÉÍÓÚÜÑ][a-záéíóúüñ]+" />
 
                                     </xs:restriction>
                                 </xs:simpleType>
-                            <!--Altura con dos decimales -->
+                                <!--Código
+                                Postal 17263 -->
                             </xs:element>
-                            <xs:element name = "altura">
-                                <xs:simpleType>
-                                    <xs:restriction base = "xs:decimal">
-                                        <xs:fractionDigits value="2"/>
-
-                                    </xs:restriction>
-                                </xs:simpleType>
-                             <!--guillejmo@gmail.com-->
-                            </xs:element>
-                            <xs:element name= "email">
+                            <xs:element name="codigoP">
                                 <xs:simpleType>
                                     <xs:restriction base="xs:string">
-                                        <xs:pattern value="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}"/>
+                                        <xs:pattern value="[0-9]{5}" />
+
+
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="DNI">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:pattern value="\d{8}[A-Z]" />
+
+                                    </xs:restriction>
+                                </xs:simpleType>
+                                <!-- 569-980-253-->
+                            </xs:element>
+                            <xs:element name="telefono">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:pattern value="\d{3}-\d{3}-\d{3}" />
+
+                                    </xs:restriction>
+                                </xs:simpleType>
+                                <!--Altura
+                                con dos decimales -->
+                            </xs:element>
+                            <xs:element name="altura">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:decimal">
+                                        <xs:fractionDigits value="2" />
+
+                                    </xs:restriction>
+                                </xs:simpleType>
+                                <!--guillejmo@gmail.com-->
+                            </xs:element>
+                            <xs:element name="email">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:pattern
+                                            value="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}" />
 
                                     </xs:restriction>
                                 </xs:simpleType>
 
                             </xs:element>
                         </xs:sequence>
-                        <xs:attribute name ="id" type="xs:ID" use= "required"/>
+                        <xs:attribute name="id" type="xs:ID" use="required" />
                     </xs:complexType>
 
                 </xs:element>
