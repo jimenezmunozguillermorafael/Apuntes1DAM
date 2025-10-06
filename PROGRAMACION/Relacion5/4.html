@@ -1,0 +1,15 @@
+<script>
+  //Solicitar un número entero y un color. Mostrar por pantalla el color separado por espacios tantas veces como nos indique el número.
+  let colorUser = prompt("Introduce un color");
+  let numberUser = Number(prompt("Introduce un numero"));
+
+  if (numberUser < 0) {
+    console.log("No son valores correctos");
+  } else {
+    let mensaje = " ";
+    for (let i = 0; i < numberUser; i++) {
+      mensaje += colorUser + " ";
+    }
+    console.log(mensaje);
+  }
+</script>

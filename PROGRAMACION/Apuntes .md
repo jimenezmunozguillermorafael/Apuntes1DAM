@@ -1,4 +1,4 @@
- ## UNIDAD 1 FUNDAMENTOS DE LA PROGRAMACIÓN, TIPOS DE DATOS Y ESTRUCTURAS DE CONTROL
+## UNIDAD 1 FUNDAMENTOS DE LA PROGRAMACIÓN, TIPOS DE DATOS Y ESTRUCTURAS DE CONTROL
 
 Hardware =físico; software =no físico
 Progrmadores=unión entre soft y hard (ware)
@@ -8,11 +8,11 @@ Datos básicos:
 Variables numericas = enteros y decimales (flotantes)
 Variable = nombre, valor y tipo
 Cadena de texto (string) (let saludo = Hola, Mundo)
-                         (let nombre = Juan)
+(let nombre = Juan)
 
-Boolean= puede ser true o false 
+Boolean= puede ser true o false
 Ejemplos boolean: let esMayorDeEdad = true
-                      esEstudiante = false
+esEstudiante = false
 
 ## LAS VARIABLES SE DECLARAN CON LET
 
@@ -36,9 +36,9 @@ La sintaxis básica de prompt es ()
 Operaciones:
 Suma (+), Podemos sumar strings. Depende del contexto
 Resta (-)
-Multiplicación (*)
+Multiplicación (\*)
 División (/)
-Modulo (%) = resto de division "let módulo = 10 % 3 = 1 
+Modulo (%) = resto de division "let módulo = 10 % 3 = 1
 
 ## Operadores lógicos en JavaScript
 
@@ -69,20 +69,20 @@ Permiten que el programa ejecute diferentes bloques de codigo segun si una condi
 
 let edad = 18
 if (edad >= 18) {
-    console .log("Eres mayor de edad")
+console .log("Eres mayor de edad")
 } else {
-    console.log("Eres menor de edad")
+console.log("Eres menor de edad")
 }
 
 # Ejemplo con else if
 
 let edad = 16
 if (edad < 13) {
-    console.log("Eres un niño)
+console.log("Eres un niño)
 } else if (edad < 18) {
-    console.log("Eres un adolescente")
+console.log("Eres un adolescente")
 } else {
-    console.log("Eres un adulto")
+console.log("Eres un adulto")
 }
 
 Los operadores de comparación permiten comparar dos valores o variables. El resultado de una comparación es siempre un valor booleano: true o false. Los operadores de comparación más comunes en JavaScript son:
@@ -96,18 +96,18 @@ Los operadores de comparación permiten comparar dos valores o variables. El res
     <= : Menor o igual que.
     >= : Mayor o igual que.
 
-## Bucles 
+## Bucles
 
 For: El bucle for se utiliza para iterar sobre una secuencia, como un rango de números o una colección de elementos (como un array). Cada vez que el bucle se ejecuta, el programa ejecuta el bloque de código asociado.
 
 Ejemplos
 
 for (let i = 0; i<5; i++){
-    console.log(i)
+console.log(i)
 }
 
 for (let i = 0; i<5; i= i+2){
-    console.log(i)
+console.log(i)
 }
 
 <script>
@@ -125,8 +125,8 @@ Ejemplo:
 
 let contraseña = ""
 while (contraseña != "QUESO"){
-    console.log("Contraseña incorrecta")
-    // Pedir contraseña
+console.log("Contraseña incorrecta")
+// Pedir contraseña
 }
 console.log("Correcto")
 
@@ -158,3 +158,35 @@ console.log("Correcto")
 
 
 </script>
+
+Con ${i + 1}) ... cada console.log es distinto, así que la consola no los agrupa.
+
+Template literal (comillas invertidas `…`)
+
+No son comillas simples ' ni dobles ".
+
+Permiten interpolación con ${ ... } y escribir el texto tal cual.
+
+${i + 1}
+
+Dentro de ${} puedes poner expresiones JS.
+
+i empieza en 0 en el for, así que i + 1 muestra 1, 2, 3… (numeración “humana”).
+
+) y espacio
+
+Justo después de ${i + 1} hay un paréntesis de cierre y un espacio.
+
+Resultado parcial: "1) ".
+
+${colorUser}
+
+Inserta el valor de la variable colorUser (por ejemplo, "rojo").
+
+Resultado completo
+
+Si i = 0 y colorUser = "rojo" → la cadena es "1) rojo".
+
+console.log(...) lo imprime en la consola en su propia línea.
+
+`…` (template literal) → permite ${expresiones} y multilínea.
