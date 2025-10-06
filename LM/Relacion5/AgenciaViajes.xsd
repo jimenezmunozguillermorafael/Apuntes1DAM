@@ -67,9 +67,7 @@
                                                                 <xs:element name="email">
                                                                     <xs:simpleType>
                                                                         <xs:restriction
-                                                                            base="xs:string">
-                                                                            <!-- Email simple:
-                                                                            usuario@dominio.tld -->
+                                                                            base="xs:string">                                                                          
                                                                             <xs:pattern
                                                                                 value="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}" />
                                                                         </xs:restriction>
@@ -85,7 +83,6 @@
                                     <xs:attribute name="codigo" use="required">
                                         <xs:simpleType>
                                             <xs:restriction base="xs:string">
-                                                <!-- Patrón: A seguido de 3 dígitos -->
                                                 <xs:pattern value="PKT-\d{4}" />
                                             </xs:restriction>
                                         </xs:simpleType>
