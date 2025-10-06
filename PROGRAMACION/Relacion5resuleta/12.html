@@ -1,0 +1,13 @@
+<script>
+
+    let numberUser = prompt("Introduce un número entero:")
+    let entrada = numberUser
+    numberUser++ // numberUser = numberUser + 1 o numberUser += 1
+
+    while (numberUser % 2 != 0) {
+        numberUser++
+        numberUser = Number(prompt("ERROR. el numero debe de ser multiplo de 2 "))
+    }
+
+    console.log("El siguiente numberUser multiplo de dos despues del " + entrada + " es el " + numberUser)
+</script>

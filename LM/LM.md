@@ -427,23 +427,6 @@ Primero va el contenido (normalmente un xs:sequence con los elementos hijo).
 
 Después, fuera del xs:sequence, van los atributos (xs:attribute).
 
-Por eso tu profe coloca:
-
-<xs:complexType>
-<xs:sequence>
-
-<!-- elementos: cliente, productos, estado -->
-
-</xs:sequence>
-
-  <!-- aquí van los atributos del elemento pedido -->
-
-<xs:attribute name="codigo" .../>
-</xs:complexType>
-
-Los atributos no pueden ir dentro del xs:sequence.
-
-Además, codigo se modela como atributo porque es un identificador corto, atómico y sin subestructura (metadato del pedido), no “contenido” del documento.
 
 ## ¿Qué significa el patrón A\d{3}?
 
@@ -468,3 +451,63 @@ En XML Schema 1.0 algunos validadores son tiquismiquis con \d. Para máxima comp
     </xs:restriction>
     </xs:simpleType>
     </xs:attribute>
+
+    Restricciones y validación en XSD:
+
+XSD permite restricciones adicionales sobre los valores que pueden contener los elementos o atributos. Algunas de las restricciones comunes incluyen:
+
+   ## Restricciones de longitud:
+
+    <xs:element name="NombreLimitado">
+     <xs:simpleType>
+       <xs:restriction base="xs:string">
+         <xs:maxLength value="50"/>
+       </xs:restriction>
+     </xs:simpleType>
+    </xs:element>
+
+En este ejemplo, se define un tipo de dato personalizado NombreLimitadoque la longitud máxima de cualquier valor de texto a 50 caracteres.
+
+ ## Valores mínimos y máximos para números:
+
+        <xs:element name="EdadLimitada">
+        <xs:simpleType>
+            <xs:restriction base="xs:integer">
+            <xs:minInclusive value="0"/>
+            <xs:maxInclusive value="120"/>
+            </xs:restriction>
+        </xs:simpleType>
+        </xs:element>
+
+Este tipo despaja el valor de edadpara que sea entre 0 y 120 años.
+
+ ## Patrones (expresiones regulares):
+
+    <xs:element name="Telefono">
+    <xs:simpleType >
+        <xs:restriction base="xs:string">
+        <xs:pattern value="\d{3}-\d{3}-\d{4}"/>
+        </xs:restriction>
+    </xs:simpleType>
+    </xs:element>
+
+Aquí se define un patrón de teléfono que requiere que el valor tenga el formato NNN-NNN-NNNNdonde Nes un dígito.
+
+## Cardinalidad (número de ocurrencias):
+
+    <xs:element name="telefono" type="xs:string" minOccurs="0" maxOccurs="3"/>
+
+    Esto permite que el elemento telefonoaparezca hasta tres veces en el documento XML, pero no se puede no aparecer (minOccurs="0").
+
+    Restricción por enumeración:
+
+    <xs:element name="estado">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:enumeration value="Pendiente"/>
+                <xs:enumeration value="Enviado"/>
+                <xs:enumeration value="Entregado"/>
+                <xs:enumeration value="Cancelado"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>

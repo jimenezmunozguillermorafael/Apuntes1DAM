@@ -1,0 +1,15 @@
+<script>
+//Solicitar dos números enteros. Mostrar por todas las números desde el segundo número introducido hasta el primer introducido.
+//Comprueba primero que el primero es menor que el segundo.
+let numberUser1 = Number(prompt("Introduce el primer numero"))
+let numberUser2 = Number(prompt("Introduce el segundo numero"))
+while (numberUser1>=numberUser2){
+    numberUser1 = Number(prompt("ERROR, el numero uno tiene que ser menor que el segundo. Introduzca el primer numero de nuevo "))
+    numberUser2 = Number(prompt("Introduce de nuevo el segundo"))
+}
+for (let i = numberUser2; i >=numberUser1; i++){
+    console.log(i);
+    
+}
+
+</script>

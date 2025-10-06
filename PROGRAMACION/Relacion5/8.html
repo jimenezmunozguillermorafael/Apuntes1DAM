@@ -1,2 +1,16 @@
+<script>
 //Solicitar un número entero. Mostrar por pantalla todos los números pares desde
-0 hasta el número.
+//0 hasta el número.
+let numberUser = Number(prompt("Introduce un numero"))
+
+if (numberUser % 1 !== 0){
+    console.log("No puede tener decimales");   
+}
+for (let i = 0; i<=numberUser; i+=2){
+    console.log(i)  
+}
+for (let i = 0; i>=numberUser; i-=2){
+    console.log(i);   
+}
+
+</script>
