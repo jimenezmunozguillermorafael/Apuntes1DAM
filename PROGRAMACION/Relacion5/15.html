@@ -1,0 +1,9 @@
+<script>
+  //Solicitar un número entero. Mostrar el siguiente número múltiplo de 2 y 3 a partir del número.
+  let numberUser = Number(prompt("Introduce un numero"));
+  let nextNumber = numberUser++;
+  while (nextNumber % 6 !== 0) {
+    nextNumber++;
+  }
+  console.log(nextNumber);
+</script>

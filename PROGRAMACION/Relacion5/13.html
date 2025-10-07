@@ -1,3 +1,12 @@
 <script>
-//
+  // Solicitar un número entero. Mostrar el siguiente múltiplo de 3 a partir del número.
+  let numberUser = Number(prompt("Introduce un número entero"));
+  // Empezamos en el siguiente número para que sea estrictamente mayor
+  let nextNumber = numberUser + 1;
+  // Avanzamos de uno en uno hasta encontrar un múltiplo de 3
+  while (nextNumber % 3 !== 0) {
+    nextNumber = nextNumber + 1; // o: nextNumber++;
+  }
+
+  console.log(nextNumber);
 </script>

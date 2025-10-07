@@ -1,0 +1,9 @@
+<script>
+  //Solicitar un número entero. Mostrar el siguiente número múltiplo de 5 a partir del número.
+  let numberUser = Number(prompt("Introduce un numero entero"));
+  let nextNumber = numberUser++;
+  while (nextNumber % 5 !== 0) {
+    nextNumber++;
+  }
+  console.log(nextNumber);
+</script>
