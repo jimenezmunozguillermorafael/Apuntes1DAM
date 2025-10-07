@@ -27,19 +27,14 @@
 
 
 #!/bin/bash
-## Ir a la ruta y despues crear 
-# mkdir -p proyecto/{docs,src/modulos,config,logs/backup,test/resultados}; 
+## Definir la ruta del archivo en una variable para no repetirla y facilitar cambios.
+## Archivo="/home/AlumnoT/Documentos/GithubTarde/proyecto/docs/prueba.txt"
 
- 
- #!/bin/bash
+## Creamos un archivo limpio para la demostración
 
-mkdir -p ~/Escritorio/proyecto/{docs,src/modulos,config,logs/backup,test/resultados} && \
-touch ~/Escritorio/proyecto/docs/{manual,guia,referencias}.txt \
-~/Escritorio/proyecto/src/{script1,script2}.sh \
-~/Escritorio/proyecto/src/modulos/modulo1.py \
-~/Escritorio/proyecto/config/{app,db}.cfg \
-~/Escritorio/proyecto/logs/{access,error}.log \
-~/Escritorio/proyecto/logs/backup/backup1.log \
-~/Escritorio/proyecto/test/{test1,test2}.txt \
-~/Escritorio/proyecto/test/resultados/resultados1.txt
+## el > borra el contenido si el archivo ya existe
+## echo "--- Archivo Inicial---"
+## touch "$Archivo"
+## echo "-------------------- echo"
 
+## Metodo1 : "echo" (El mas comun para lineas simples)
