@@ -2,8 +2,8 @@
   //Solicitar un número entero. Mostrar el siguiente número múltiplo de 2, 3 y 5 a partir del número.
   let numberUser = Number(prompt("Introduce un numero"));
   let nextNumber = nextNumber++;
-  while (nextNumber % 30 !== 0) {
-    nextNumber;
+   while ((nextNumber % 2 !== 0) || (nextNumber % 3 !== 0) || (nextNumber % 5 !==0)) {
+    nextNumber++;
   }
   console.log(nextNumber);
 </script>

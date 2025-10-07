@@ -1,22 +1,12 @@
 <script>
   //Solicitar un número entero y un color. Mostrar por pantalla el color tantas veces como nos indique el número, numerando las apariciones del color.
 
-  let colorUser = prompt("Introduce un color");
-  let numberUser = Number(prompt("Introduce un numero"));
-  let mensaje = "";
-  if (numberUser < 0) {
-    mensaje = "Tu numero no puede ser menor que 0";
-    console.log(mensaje);
-  }
+  let numero = prompt("Introduce un numero: ")
+numero = Number(numero)
+let color = prompt("Introduce un color:")
 
-  for (i = 0; i < numberUser; i++) {
-    mensaje += colorUser + " ";
-    // `…` (template literal) → permite ${expresiones} y multilínea.
-    // ${i + 1}: evalúa la expresión.
-    // i  índice del for empezando en 0.
-    // i + 1 hace que la numeración empiece en 1, 2, 3… (numeración “humana”).
-    // ) son caracteres literales (paréntesis y espacio) que aparecen tal cual.
-    //${colorUser}: inserta el valor de la variable colorUser
-    console.log(`${i + 1}) ${colorUser}`);
-  }
+for (let i = 0; i < numero; i++) {
+    // (i+1) es para que se muestre la numeración por pantalla empezando por el 1 y no por el 0, que es el primer valor de i.
+    console.log((i+1) + ".- " + color) 
+}
 </script>

@@ -2,9 +2,10 @@
   //Solicitar dos números enteros. Mostrar el siguiente número múltiplo del primer número introducido, a partir del segundo número introducido.
   let numberUser1 = Number(prompt("Introduce el primer numero"));
   let numberUser2 = Number(prompt("Introduce el segundo numero"));
-  let nextNumber = numberUser1++;
-  while (nextNumber % numberUser1 !== 0) {
-    nextNumber++;
+  let numberOri = numberUser2
+  while (numberUser2 % numberUser1 !=0){
+    numberUser2++
   }
-  console.log(numberUser2 + nextNumber);
+  console.log(numberUser2);
+  
 </script>

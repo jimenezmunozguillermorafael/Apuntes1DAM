@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inventario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="inventario.xsd">
+    <producto id = "78">
+        <nombre>Raton</nombre>
+        <categoria>Periferico</categoria>
+        <precio>20.20</precio>
+        <stock>100</stock>
+        <proveedor>
+            <nombre>Decor</nombre>
+            <telefono>123-123-123</telefono>
+            <pais>España</pais>
+
+        </proveedor>
+    </producto>
+
+</inventario>

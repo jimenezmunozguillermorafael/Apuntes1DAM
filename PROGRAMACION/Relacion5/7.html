@@ -1,15 +1,9 @@
 <script>
   //Solicitar un número entero. Mostrar por pantalla todos los números desde el número hasta el 0.
-  let numberUser = Number(prompt("Introduce un numero entero"));
-  if (numberUser % 1 !== 0) {
-    console.log("Introduce un numero entero");
-  } 
-  
-  for ( i = numberUser; i >= 0; i--) {
-    console.log(i);
-  }
+  let numero = prompt("Introduce un número entero:")
+  numero = Number(numero)
 
-  for ( i = numberUser; i <= 0; i++) {
-    console.log(i);
+  for (let i = numero; i >= 0; i--) {
+    console.log(i)
   }
 </script>
