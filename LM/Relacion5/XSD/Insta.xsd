@@ -1,0 +1,63 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="redSocial">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="usuario">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="nombreUsuario">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:pattern value="[A-Za-z0-9_]{3,15}" />
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="email">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:pattern
+                                            value="[A-Za-z0-9._%+\-]+@[A-Za-z0-9.\-]+\.[A-Za-z]{2,}" />
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="seguidores" type="xs:nonNegativeInteger">
+                            </xs:element>
+                            <xs:element name="publicacion" minOccurs="0" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="titulo" type="xs:string">
+                                        </xs:element>
+                                        <xs:element name="fecha" type="xs:date">
+                                        </xs:element>
+                                        <xs:element name="likes" minOccurs="0" maxOccurs="unbounded">
+                                        </xs:element>
+                                        <xs:element name="comentario">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="autor">
+                                                        <xs:simpleType>
+                                                            <xs:restriction base="xs:string">
+                                                                <xs:pattern
+                                                                    value="[A-Za-z0-9_]{3,15}" />
+                                                            </xs:restriction>
+                                                        </xs:simpleType>
+
+                                                    </xs:element>
+                                                    <xs:element name="contenido" type="xs:string">
+                                                    </xs:element>
+                                                    <xs:element name="fecha" type="xs:dateTime">
+                                                    </xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="id" type="xs:positiveInteger" use="required" />
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

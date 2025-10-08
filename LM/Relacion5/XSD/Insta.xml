@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<redSocial xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="Insta.xsd">
+    <usuario id="1">
+        <nombreUsuario>juan_23</nombreUsuario>
+        <email>juan23@example.com</email>
+        <seguidores>120</seguidores>
+
+        <publicacion>
+            <titulo>Hola mundo</titulo>
+            <fecha>2025-10-08</fecha>
+            <likes>34</likes>
+
+            <comentario>
+                <autor>maria_7</autor>
+                <contenido>¡Bienvenido!</contenido>
+                <fecha>2025-10-08T09:30:00Z</fecha>
+            </comentario>
+        </publicacion>
+    </usuario>
+</redSocial>    
