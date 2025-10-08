@@ -10,11 +10,13 @@
 
 ## DNI, como ponerlo XXXXXXXX + "LETRA"
 
-<xs:simpleType name="dniType">
-    <xs:restriction base="xs:string">
-        <xs:pattern value="\d{8}[A-Z]" />
-    </xs:restriction>
-</xs:simpleType>
+<xs:element name = "dni">
+    <xs:simpleType>
+         <xs:restriction base = "xs:string">
+             <xs:pattern value="\d{8}[A-Z]"/>
+         </xs:restriction>
+    </xs:simpleType>  
+ </xs:element>
 
 ## Numero de telefono XXX-XXX-XXX
 
@@ -31,7 +33,7 @@
 <xs:element name="nombre">
     <xs:simpleType>
         <xs:restriction base="xs:string">
-            <xs:minLenght value="1" />
+            
             <xs:pattern value="[A-Z].*" />
         </xs:restriction>
     </xs:simpleType>
