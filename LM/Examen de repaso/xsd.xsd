@@ -1,0 +1,57 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="temporada">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="partido" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="rival">
+                <xs:simpleType>
+                  <xs:restriction base= "xs:string">
+                    <xs:minLength value="1"/>
+                  </xs:restriction>
+                </xs:simpleType>             
+              </xs:element>
+              <xs:element name="fecha">
+                <xs:simpleType>
+                  <xs:restriction base="xs:date" />
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="resultado">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:pattern value="\d-\d" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="estadio">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:minLength value="1"/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="asistencia">
+                <xs:simpleType>
+                  <xs:restriction base="xs:integer">
+                    <xs:minExclusive value="0" />
+                    <xs:maxExclusive value="50000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="goles" minOccurs="0" maxOccurs="unbounded">
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="id" use ="required">
+              <xs:simpleType>
+                <xs:restriction base="xs:string">
+                  <xs:pattern value="P\d{3}" />
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:attribute>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

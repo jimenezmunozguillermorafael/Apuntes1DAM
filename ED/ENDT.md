@@ -296,6 +296,7 @@ Una vez creado el repositorio, se te proporcionará la URL del repositorio remot
 Ejemplo práctico:
 
 Si estás desarrollando una aplicación web y decides crear un repositorio llamado mi_app_web, este repositorio alojará todo el código, historial de versiones, y será el punto de referencia para la colaboración con otros desarrolladores.
+
 ## 4.2. Conectar un Repositorio Local con GitHub
 
 Una vez que tienes un repositorio local y un repositorio remoto creado en GitHub, necesitas enlazarlos para poder sincronizar los cambios entre ambos.
@@ -644,3 +645,20 @@ venv/
 *.exe
 *.dll
 
+## Diferencias entre main y origin
+
+Origin es el repositorio en Github
+
+Main es el repositorio en local = master
+
+Mientras el pull te trae las cosas el first te trae los cambios a tu rama pero no los aplica.
+
+## Como se haria un stash 
+ darle al "+" en commits
+ Si el main esta delnate del repositorio no esta actualizado
+
+## Consola
+
+Abrimos la consola y usamos los siguientes comandos :
+
+git reset --soft HEAD~1 . Elimina el ultimo cambio

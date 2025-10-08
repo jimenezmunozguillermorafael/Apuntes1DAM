@@ -1,3 +1,4 @@
+<!ENTITY cartera SYSTEM "cartera">
 <!ELEMENT cartera (cliente+)>
 <!ELEMENT cliente (nombre, direccion, codigoP, DNI, telefono, altura, email)>
 <!ELEMENT nombre (#PCDATA)>

@@ -1,0 +1,8 @@
+
+<!ELEMENT biblioteca (seccion+)>
+<!ELEMENT seccion (nombre, libro+)>
+<!ELEMENT libro (titulo, autor, anio?)>
+<!ELEMENT titulo (#PCDATA)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT autor (#PCDATA)>
+<!ELEMENT anio (#PCDATA)>

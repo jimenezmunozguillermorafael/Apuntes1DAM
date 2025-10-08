@@ -164,13 +164,13 @@ Elementos hijos: Pueden contener otros elementos como hijos, definidos en secuen
 
 Cantidad de ocurrencias: El número de veces que un elemento puede aparecer se define mediante los operadores +, \*, ?:
 
-    + indica que el elemento debe aparecer al menos una vez.
+    + indica que el elemento debe aparecer al menos una vez. 1-M
 
 
-    \* indica que el elemento puede aparecer cero o más veces.
+    * indica que el elemento puede aparecer cero o más veces. 0-M
 
 
-    ? indica que el elemento es opcional y puede aparecer una o ninguna vez.
+    ? indica que el elemento es opcional y puede aparecer una o ninguna vez. 0-1
 
 Esas marcas +, _, ? se usan en DTD y en regex (patrones de texto).
 En XSD para la multiplicidad de elementos se usan minOccurs/maxOccurs, no + _ ?.

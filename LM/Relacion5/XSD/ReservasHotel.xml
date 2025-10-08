@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<reservas xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:noNamespaceSchemaLocation="Reservas.xsd">
+<reservas xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Reservas.xsd">
     <reserva codigo="R001">
         <cliente>
             <nombre>Lucía Martínez</nombre>

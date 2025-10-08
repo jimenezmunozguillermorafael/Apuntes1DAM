@@ -26,7 +26,7 @@
                                     </xs:sequence>
                                 </xs:complexType>
                             </xs:element>
-                            <xs:element name="habitacion" minOccurs="1" maxOccurs="250">
+                            <xs:element name="habitacion">
                                 <xs:complexType>
                                     <xs:attribute name="tipo" use="required">
                                         <xs:simpleType>
@@ -37,8 +37,7 @@
                                             </xs:restriction>
                                         </xs:simpleType>
                                     </xs:attribute>
-                                    <xs:attribute name="numero" type="xs:positiveInteger"
-                                        use="required" />
+                                    <xs:attribute name="numero" type="xs:positiveInteger"/>
                                 </xs:complexType>
                             </xs:element>
                             <xs:element name="fechaEntrada" type="xs:date" />
@@ -48,7 +47,7 @@
                                     <xs:restriction base="xs:decimal">
                                         <xs:minExclusive value="50" />
                                         <xs:maxExclusive value="5000" />
-                                        <xs:fractionDigits value="2" />
+                                        <xs:pattern value="\d+\.d{2}"/>
                                     </xs:restriction>
                                 </xs:simpleType>
                             </xs:element>

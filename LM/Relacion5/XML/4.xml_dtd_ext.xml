@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE biblioteca SYSTEM "4.xml_dtd_ext.dtd">
+<biblioteca>
+    <seccion>
+        <nombre>SeccionA</nombre>
+        <libro>
+            <titulo>El Quijote</titulo>
+            <autor>Cervantes</autor>
+            <anio>1846</anio>
+        </libro>
+    </seccion>
+    <seccion>
+        <nombre>SeccionB</nombre>
+        <libro>
+            <titulo>El principito</titulo>
+            <autor>Juanito Marques</autor>
+            <anio>1848</anio>
+        </libro>
+    </seccion>
+    <seccion>
+        <nombre>SeccionC</nombre>
+        <libro>
+            <titulo>Berserk</titulo>
+            <autor>Kentaro Miura</autor>
+            <anio>1999</anio>
+        </libro>
+    </seccion>
+</biblioteca>

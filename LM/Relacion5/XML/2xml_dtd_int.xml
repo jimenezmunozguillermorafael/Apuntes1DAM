@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE alumno [
+    <!ELEMENT alumno (nombre, apellido, edad?)> <!--la "?" en edad indica que el elemento es opcional y puede aparecer una o ninguna vez-->
+    <!ELEMENT nombre (#PCDATA)>
+    <!ELEMENT apellido (#PCDATA)>
+    <!ELEMENT edad (#PCDATA)>
+]>
+<alumno>
+    <nombre>Guillermo</nombre>
+    <apellido>Jimenez</apellido>
+    <edad>20</edad>
+</alumno>
