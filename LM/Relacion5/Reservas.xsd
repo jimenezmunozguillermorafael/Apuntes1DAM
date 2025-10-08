@@ -12,7 +12,6 @@
                                         <xs:element name="nombre">
                                             <xs:simpleType>
                                                 <xs:restriction base="xs:string">
-
                                                     <xs:pattern value="[A-Z].*" />
                                                 </xs:restriction>
                                             </xs:simpleType>
@@ -27,7 +26,6 @@
                                     </xs:sequence>
                                 </xs:complexType>
                             </xs:element>
-
                             <xs:element name="habitacion" minOccurs="1" maxOccurs="250">
                                 <xs:complexType>
                                     <xs:attribute name="tipo" use="required">
@@ -45,7 +43,6 @@
                             </xs:element>
                             <xs:element name="fechaEntrada" type="xs:date" />
                             <xs:element name="fechaSalida" type="xs:date" />
-
                             <xs:element name="precioTotal">
                                 <xs:simpleType>
                                     <xs:restriction base="xs:decimal">
@@ -56,7 +53,6 @@
                                 </xs:simpleType>
                             </xs:element>
                         </xs:sequence>
-
                         <xs:attribute name="codigo" use="required">
                             <xs:simpleType>
                                 <xs:restriction base="xs:string">
