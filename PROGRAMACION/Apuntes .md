@@ -190,3 +190,5 @@ Si i = 0 y colorUser = "rojo" → la cadena es "1) rojo".
 console.log(...) lo imprime en la consola en su propia línea.
 
 `…` (template literal) → permite ${expresiones} y multilínea.
+
+

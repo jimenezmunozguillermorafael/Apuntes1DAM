@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <temporada xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:noNamespaceSchemaLocation="xsd.xsd">
+    xsi:noNamespaceSchemaLocation="Temporada.xsd">
 
   <partido id="P001">
     <rival>Real Betis</rival>

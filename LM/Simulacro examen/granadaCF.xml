@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ## **Ejercicio 11 – Granada CF (DTD)**
+
+Crea un **documento XML** y su correspondiente **DTD** que representen la plantilla del **Granada CF**.
+
+### Requisitos:
+
+- El elemento raíz será `<granadaCF>`.
+- Contendrá:
+  - Un único elemento `<club>` con los datos del club:
+    - `<nombre>`, `<fundacion>`, `<estadio>`, `<capacidad>`.
+  - Un elemento `<plantilla>` que incluya varios `<jugador>` con:
+    - `<nombre>`, `<dorsal>`, `<posicion>`, `<nacionalidad>` y `<edad>`.
+    - Atributo `titular` con valores posibles `"sí"` o `"no"`.
+- Los jugadores deben estar definidos como una lista ordenada (`<!ELEMENT plantilla (jugador+)>`).
+-->
+
+<!DOCTYPE granadaCF SYSTEM "granadaCF.dtd">
+<granadaCF>
+  <club>
+    <nombre>Granada Club de Fútbol</nombre>
+    <fundacion>1931</fundacion>
+    <estadio>Nuevo Los Cármenes</estadio>
+    <capacidad>19336</capacidad>
+  </club>
+
+  <plantilla>
+    <jugador titular="sí">
+      <nombre>Raúl Fernández</nombre>
+      <dorsal>1</dorsal>
+      <posicion>Portero</posicion>
+      <nacionalidad>España</nacionalidad>
+      <edad>34</edad>
+    </jugador>
+    <jugador titular="no">
+      <nombre>Ricard Sánchez</nombre>
+      <dorsal>12</dorsal>
+      <posicion>Defensa</posicion>
+      <nacionalidad>España</nacionalidad>
+      <edad>24</edad>
+    </jugador>
+  </plantilla>
+</granadaCF>
