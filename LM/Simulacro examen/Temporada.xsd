@@ -7,10 +7,10 @@
             <xs:sequence>
               <xs:element name="rival">
                 <xs:simpleType>
-                  <xs:restriction base= "xs:string">
-                    <xs:minLength value="1"/>
+                  <xs:restriction base="xs:string">
+                    <xs:minLength value="1" />
                   </xs:restriction>
-                </xs:simpleType>             
+                </xs:simpleType>
               </xs:element>
               <xs:element name="fecha">
                 <xs:simpleType>
@@ -27,7 +27,7 @@
               <xs:element name="estadio">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
-                    <xs:minLength value="1"/>
+                    <xs:minLength value="1" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
@@ -40,9 +40,16 @@
                 </xs:simpleType>
               </xs:element>
               <xs:element name="goles" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="gol">
+
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
               </xs:element>
             </xs:sequence>
-            <xs:attribute name="id" use ="required">
+            <xs:attribute name="id" use="required">
               <xs:simpleType>
                 <xs:restriction base="xs:string">
                   <xs:pattern value="P\d{3}" />
