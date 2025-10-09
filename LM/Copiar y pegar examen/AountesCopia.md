@@ -201,3 +201,24 @@ minOccurs="1" (minOccurs por defecto simepre es 1) Aparece siempre
   </xs:complexType>
 </xs:element>
 ```
+
+## Atributo a elemento
+
+```html
+<habitacion tipo="Individual" numero="220"></habitacion>
+  
+  <xs:element name="habitacion">
+    <xs:complexType>
+      <xs:attribute name="tipo">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="Individual" />
+            <xs:enumeration value="Doble" />
+            <xs:enumeration value="Suite" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="numero" type="xs:positiveInteger"> </xs:attribute>
+    </xs:complexType> </xs:element
+></habitacion>
+```
