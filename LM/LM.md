@@ -427,7 +427,6 @@ Primero va el contenido (normalmente un xs:sequence con los elementos hijo).
 
 Después, fuera del xs:sequence, van los atributos (xs:attribute).
 
-
 ## ¿Qué significa el patrón A\d{3}?
 
 A → la letra A literal al inicio.
@@ -456,7 +455,7 @@ En XML Schema 1.0 algunos validadores son tiquismiquis con \d. Para máxima comp
 
 XSD permite restricciones adicionales sobre los valores que pueden contener los elementos o atributos. Algunas de las restricciones comunes incluyen:
 
-   ## Restricciones de longitud:
+## Restricciones de longitud:
 
     <xs:element name="NombreLimitado">
      <xs:simpleType>
@@ -468,7 +467,7 @@ XSD permite restricciones adicionales sobre los valores que pueden contener los 
 
 En este ejemplo, se define un tipo de dato personalizado NombreLimitadoque la longitud máxima de cualquier valor de texto a 50 caracteres.
 
- ## Valores mínimos y máximos para números:
+## Valores mínimos y máximos para números:
 
         <xs:element name="EdadLimitada">
         <xs:simpleType>
@@ -481,7 +480,7 @@ En este ejemplo, se define un tipo de dato personalizado NombreLimitadoque la lo
 
 Este tipo despaja el valor de edadpara que sea entre 0 y 120 años.
 
- ## Patrones (expresiones regulares):
+## Patrones (expresiones regulares):
 
     <xs:element name="Telefono">
     <xs:simpleType >

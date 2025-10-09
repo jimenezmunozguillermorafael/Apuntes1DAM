@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plataforma xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="Escuela.xsd">
+    <!-- Condiciones:
+id obligatorio, formato C + 3 números (regex).
+nivel → enumeración: Básico, Intermedio, Avanzado.
+nota → decimal entre 0 y 10, con una cifra decimal (\d(\.\d)?).
+dni → regex 8 dígitos + 1 letra.
+email → regex válido.
+nombre de profesor y alumno debe empezar por mayúscula.-->
+    <curso id="C001">
+        <titulo>Desarrollo Web con HTML y CSS</titulo>
+        <duracion horas="40" />
+        <nivel>Intermedio</nivel>
+        <profesor>
+            <nombre>Juan Pérez</nombre>
+            <email>juan.perez@example.com</email>
+        </profesor>
+        <alumnos>
+            <alumno>
+                <nombre>Ana López</nombre>
+                <dni>12345678A</dni>
+                <nota>9.5</nota>
+            </alumno>
+            <alumno>
+                <nombre>Carlos Ruiz</nombre>
+                <dni>87654321B</dni>
+                <nota>7.8</nota>
+            </alumno>
+        </alumnos>
+    </curso>
+</plataforma>

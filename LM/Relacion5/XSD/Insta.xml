@@ -11,7 +11,7 @@
             <fecha>2025-10-08</fecha>
             <likes>34</likes>
 
-            <comentario>
+            <comentario identity="C001">
                 <autor>maria_7</autor>
                 <contenido>¡Bienvenido!</contenido>
                 <fecha>2025-10-08T09:30:00Z</fecha>
